@@ -203,23 +203,10 @@
 
     <!-- Auth-Bereich: Registrierung + Login -->
     <div id="auth-section">
-      <h1 id="auth-title">Registrieren</h1>
-
-      <div id="register-box">
-        <input type="text" id="register-name" placeholder="Name eingeben">
-        <input type="email" id="register-email" placeholder="E-Mail eingeben">
-        <input type="password" id="register-password" placeholder="Passwort eingeben">
-        <button onclick="registerUser()">Registrieren</button>
-        <p>Schon registriert? <a href="#" onclick="showLogin(); return false;">Hier anmelden</a></p>
-      </div>
-
-      <div id="login-box" class="hidden">
-        <input type="email" id="login-email" placeholder="E-Mail eingeben">
-        <input type="password" id="login-password" placeholder="Passwort eingeben">
-        <button onclick="loginUser()">Login</button>
-        <p><a href="#" onclick="forgotPassword(); return false;">Passwort vergessen?</a></p>
-        <p>Noch kein Konto? <a href="#" onclick="showRegister(); return false;">Hier registrieren</a></p>
-      </div>
+      <h1 id="auth-title">Willkommen!</h1>
+      <p class="auth-sub">Wie heißt du?</p>
+      <input type="text" id="name-input" placeholder="Dein Name" autocomplete="name">
+      <button onclick="startWithName()">Los geht's →</button>
     </div>
 
     <!-- Dashboard-Bereich -->

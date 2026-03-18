@@ -12,7 +12,7 @@ const path         = require('path');
 process.env.GOOGLE_APPLICATION_CREDENTIALS = path.join(__dirname, 'google-key.json');
 
 const client     = new textToSpeech.TextToSpeechClient();
-const OUTPUT_DIR = path.join(__dirname, 'sprachen', 'audio');
+const OUTPUT_DIR = path.join(__dirname, 'audio');
 
 // ─── VOICE CONFIG ────────────────────────────────────────────────────────────
 // tr-TR-Chirp3-HD-Aoede = weiblich, modernste Google-Stimme (höchste Qualität)
@@ -31,7 +31,7 @@ const AUDIO_CONFIG = {
 // Liest alle { tr: '...', audio: 'audio/xxx.mp3' } Paare direkt aus app.js.
 // Keine manuelle Pflege der WORDS-Liste nötig!
 function extractWordsFromAppJs() {
-  const appJsPath = path.join(__dirname, 'sprachen', 'app.js');
+  const appJsPath = path.join(__dirname, 'app.js');
   const content   = fs.readFileSync(appJsPath, 'utf8');
   const lines     = content.split('\n');
   const pairs     = new Map(); // filename → text (Duplikate per Dateiname entfernen)

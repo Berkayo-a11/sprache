@@ -2597,23 +2597,14 @@ function isContainerUnlocked(index) {
 // VIEW SWITCHING
 // =============================================
 
-function showRegister() {
+function showNameInput() {
   document.getElementById('auth-section').classList.remove('hidden');
-  document.getElementById('auth-title').classList.remove('hidden');
-  document.getElementById('auth-title').innerText = 'Registrieren';
-  document.getElementById('register-box').classList.remove('hidden');
-  document.getElementById('login-box').classList.add('hidden');
   document.getElementById('dashboard-section').classList.add('hidden');
 }
 
-function showLogin() {
-  document.getElementById('auth-section').classList.remove('hidden');
-  document.getElementById('auth-title').classList.remove('hidden');
-  document.getElementById('auth-title').innerText = 'Login';
-  document.getElementById('register-box').classList.add('hidden');
-  document.getElementById('login-box').classList.remove('hidden');
-  document.getElementById('dashboard-section').classList.add('hidden');
-}
+// Compat-Aliase falls irgendwo noch referenziert
+function showRegister() { showNameInput(); }
+function showLogin() { showNameInput(); }
 
 function showDashboard(name) {
   const user = getCurrentUser();
@@ -3829,52 +3820,21 @@ function editAccount() {
 function logoutUser() {
   localStorage.removeItem('loggedInUser');
   document.getElementById('account-menu').classList.add('hidden');
-  showRegister();
+  showNameInput();
 }
 
 // =============================================
 // AUTH
 // =============================================
 
-function registerUser() {
-  const name = document.getElementById('register-name').value.trim();
-  const email = document.getElementById('register-email').value.trim();
-  const password = document.getElementById('register-password').value.trim();
-  if (!name || !email || !password) { alert('Bitte alle Felder ausfüllen'); return; }
-  const users = JSON.parse(localStorage.getItem('users') || '[]');
-  if (users.some(u => u.email === email)) { alert('E-Mail ist bereits registriert'); return; }
-  users.push({ name, email, password });
-  localStorage.setItem('users', JSON.stringify(users));
-  alert('Registrierung erfolgreich. Bitte einloggen.');
-  document.getElementById('register-name').value = '';
-  document.getElementById('register-email').value = '';
-  document.getElementById('register-password').value = '';
-  showLogin();
-}
-
-function loginUser() {
-  const email = document.getElementById('login-email').value.trim();
-  const password = document.getElementById('login-password').value.trim();
-  if (!email || !password) { alert('Bitte E-Mail und Passwort eingeben'); return; }
-  const users = JSON.parse(localStorage.getItem('users') || '[]');
-  const user = users.find(u => u.email === email && u.password === password);
-  if (!user) { alert('Falsche E-Mail oder Passwort'); return; }
+function startWithName() {
+  const name = document.getElementById('name-input').value.trim();
+  if (!name) { alert('Bitte gib deinen Namen ein'); return; }
+  // Interner Key für Fortschritt (basiert auf Name)
+  const email = 'user_' + name.toLowerCase().replace(/\s+/g, '_');
+  const user = { name, email };
   localStorage.setItem('loggedInUser', JSON.stringify(user));
   showDashboard(user.name);
-}
-
-function forgotPassword() {
-  const email = prompt('Bitte E-Mail eingeben, um Passwort zurückzusetzen:');
-  if (!email || !email.trim()) return;
-  const users = JSON.parse(localStorage.getItem('users') || '[]');
-  const i = users.findIndex(u => u.email === email.trim());
-  if (i === -1) { alert('Kein Nutzer mit dieser E-Mail gefunden.'); return; }
-  const pw = prompt('Neues Passwort eingeben:');
-  if (!pw || !pw.trim()) { alert('Passwort kann nicht leer sein.'); return; }
-  users[i].password = pw.trim();
-  localStorage.setItem('users', JSON.stringify(users));
-  alert('Passwort geändert. Bitte melde dich jetzt an.');
-  showLogin();
 }
 
 // =============================================
@@ -4181,6 +4141,12 @@ window.addEventListener('DOMContentLoaded', () => {
   if (saved) {
     showDashboard(JSON.parse(saved).name);
   } else {
-    showRegister();
+    showNameInput();
+  }
+
+  // Enter-Taste auf Name-Input
+  const nameInput = document.getElementById('name-input');
+  if (nameInput) {
+    nameInput.addEventListener('keydown', e => { if (e.key === 'Enter') startWithName(); });
   }
 });

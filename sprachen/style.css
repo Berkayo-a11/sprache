@@ -630,6 +630,13 @@ body::after {
 #auth-title {
   color: #1a1550;
   margin-top: 0;
+  text-align: center;
+}
+.auth-sub {
+  color: #555;
+  text-align: center;
+  margin: 0 0 12px;
+  font-size: 1rem;
 }
 
 input {
