@@ -10,35 +10,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="protected-content" style="display:none;"></div>
-  <script>
-const password = "Cara11022002";
-let allowed = false;
-
-// prüfen ob schon gespeichert
-if (localStorage.getItem("auth") === password) {
-  allowed = true;
-} else {
-  const input = prompt("Passwort eingeben:");
-
-  if (input === password) {
-    localStorage.setItem("auth", password);
-    allowed = true;
-  }
-}
-
-// wenn Seite geladen ist
-window.addEventListener("DOMContentLoaded", function () {
-  const content = document.getElementById("protected-content");
-
-  if (allowed) {
-    content.style.display = "block";
-  } else {
-    document.body.innerHTML = "<h1>Zugriff verweigert</h1>";
-  }
-});
-</script>
-</script>
   <!-- Dekorativer Sternenhimmel Hintergrund -->
   <div class="sky-decor" aria-hidden="true">
     <!-- Linke Seite: Sterne & Monde -->
@@ -182,6 +153,54 @@ window.addEventListener("DOMContentLoaded", function () {
 
   <div class="container">
 
+    <!-- Schwarze Katze (SVG) -->
+    <span class="flying-cat">
+      <svg viewBox="0 0 80 55" xmlns="http://www.w3.org/2000/svg" width="80" height="55">
+        <defs>
+          <radialGradient id="catEyeGrad" cx="40%" cy="35%" r="55%">
+            <stop offset="0%"  stop-color="#ffff60"/>
+            <stop offset="50%" stop-color="#aaff00"/>
+            <stop offset="100%" stop-color="#336600"/>
+          </radialGradient>
+          <filter id="catEyeGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="1.8" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- Schwanz -->
+        <path d="M 62 33 C 74 22, 78 10, 68 5 C 64 2, 59 6, 64 10" stroke="#0a0a0a" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <!-- Körper -->
+        <ellipse cx="44" cy="36" rx="22" ry="15" fill="#0a0a0a"/>
+        <!-- Kopf -->
+        <circle cx="19" cy="26" r="15" fill="#0a0a0a"/>
+        <!-- Ohren -->
+        <polygon points="9,14  5,1  18,12" fill="#0a0a0a"/>
+        <polygon points="20,12  25,1  30,13" fill="#0a0a0a"/>
+        <polygon points="10,13  7,5  16,11" fill="#884466" opacity="0.6"/>
+        <polygon points="21,11  25,4  29,12" fill="#884466" opacity="0.6"/>
+        <!-- Augen (leuchtend) -->
+        <ellipse cx="13" cy="24" rx="4" ry="4.5" fill="url(#catEyeGrad)" filter="url(#catEyeGlow)"/>
+        <ellipse cx="13" cy="24" rx="1.2" ry="4" fill="#000"/>
+        <ellipse cx="24" cy="24" rx="4" ry="4.5" fill="url(#catEyeGrad)" filter="url(#catEyeGlow)"/>
+        <ellipse cx="24" cy="24" rx="1.2" ry="4" fill="#000"/>
+        <!-- Nase & Maul -->
+        <path d="M 18 30 L 19.5 32.5 L 21 30 Z" fill="#cc6688"/>
+        <path d="M 19.5 32.5 C 17 34.5, 13 33.5, 12 31" stroke="#cc6688" stroke-width="0.8" fill="none"/>
+        <path d="M 19.5 32.5 C 22 34.5, 26 33.5, 27 31" stroke="#cc6688" stroke-width="0.8" fill="none"/>
+        <!-- Schnurrhaare links -->
+        <line x1="2" y1="26" x2="14" y2="28" stroke="#444" stroke-width="0.8" opacity="0.8"/>
+        <line x1="2" y1="29" x2="14" y2="29" stroke="#444" stroke-width="0.8" opacity="0.8"/>
+        <line x1="2" y1="32" x2="14" y2="30" stroke="#444" stroke-width="0.8" opacity="0.8"/>
+        <!-- Schnurrhaare rechts -->
+        <line x1="25" y1="28" x2="37" y2="26" stroke="#444" stroke-width="0.8" opacity="0.8"/>
+        <line x1="25" y1="29" x2="37" y2="29" stroke="#444" stroke-width="0.8" opacity="0.8"/>
+        <line x1="25" y1="30" x2="37" y2="32" stroke="#444" stroke-width="0.8" opacity="0.8"/>
+        <!-- Pfoten -->
+        <ellipse cx="30" cy="49" rx="6" ry="4" fill="#0a0a0a"/>
+        <ellipse cx="43" cy="50" rx="6" ry="4" fill="#0a0a0a"/>
+      </svg>
+    </span>
+
     <!-- Auth-Bereich: Registrierung + Login -->
     <div id="auth-section">
       <h1 id="auth-title">Registrieren</h1>
@@ -286,6 +305,5 @@ window.addEventListener("DOMContentLoaded", function () {
   </div>
 
   <script src="app.js"></script>
-  </div>
 </body>
 </html>

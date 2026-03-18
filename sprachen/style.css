@@ -106,8 +106,8 @@ body {
   offset-path: path('M -60 820 C 80 700, 180 520, 280 340 S 420 140, 520 -60');
   offset-rotate: auto 90deg; /* +90° dreht die Spitze (SVG-Top) in Flugrichtung */
   offset-distance: 0%;
-  animation: rocketFly 9s cubic-bezier(0.35, 0, 0.55, 1) infinite;
-  animation-delay: 1s;
+  animation: rocketFly 50s linear infinite;
+  animation-delay: 4s;
   opacity: 0;
   z-index: 0;
   pointer-events: none;
@@ -115,10 +115,38 @@ body {
 }
 
 @keyframes rocketFly {
-  0%   { offset-distance: 0%;   opacity: 0;   }
-  6%   { opacity: 1;            }
-  88%  { opacity: 1;            }
-  100% { offset-distance: 100%; opacity: 0;   }
+  0%   { offset-distance: 0%;   opacity: 0; }
+  3%   { opacity: 1; }
+  15%  { opacity: 1; }
+  18%  { offset-distance: 100%; opacity: 0; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+/* =============================================
+   SCHWARZE KATZE — CSS Motion Path (rechts → links)
+   ============================================= */
+.flying-cat {
+  position: fixed;
+  width: 80px;
+  height: 55px;
+  top: 0; left: 0;
+  offset-path: path('M 1500 220 C 1200 170, 950 290, 650 210 S 320 155, -100 210');
+  offset-rotate: 0deg;
+  offset-distance: 0%;
+  animation: catDrift 65s ease-in-out infinite;
+  animation-delay: 22s;
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 0 10px rgba(100,255,120,0.45)) drop-shadow(0 0 3px rgba(180,255,100,0.3));
+}
+
+@keyframes catDrift {
+  0%   { offset-distance: 0%;   opacity: 0; }
+  4%   { opacity: 1; }
+  13%  { opacity: 1; }
+  16%  { offset-distance: 100%; opacity: 0; }
+  100% { offset-distance: 100%; opacity: 0; }
 }
 
 /* =============================================
@@ -2145,6 +2173,7 @@ body, .container {
 .toast-show {
   bottom: calc(24px + env(safe-area-inset-bottom));
 }
+
 
 /* =============================================
    CATEGORY FINAL TEST
