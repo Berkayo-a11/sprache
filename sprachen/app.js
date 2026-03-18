@@ -3383,11 +3383,16 @@ function buildLessonHTML(categoryTitle, lessonTitle, content) {
   const nachsprechHTML = content.nachsprech.map(w => {
     const text  = typeof w === 'string' ? w : w.tr;
     const audio = typeof w === 'string' ? audioFor(text) : (w.audio || audioFor(text));
+    // Deutsche Übersetzung aus woerter-Array der gleichen Lektion suchen
+    const deEntry = content.woerter && content.woerter.find(ww => ww.tr === text);
+    const de = (w.de) || (deEntry && deEntry.de) || '';
     return `
     <button class="nachsprech-word"
             onclick="speakFromBtn(this)"
             data-text="${text}"
-            data-audio="${audio}">🔊 ${text}</button>`;
+            data-audio="${audio}">
+      <span class="nw-tr">🔊 ${text}</span>${de ? `<span class="nw-de">${de}</span>` : ''}
+    </button>`;
   }).join('');
 
   const dialogHTML = content.miniDialog.map((line, i) => {
