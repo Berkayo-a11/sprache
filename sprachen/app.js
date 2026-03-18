@@ -994,6 +994,370 @@ const LESSON_CONTENT = {
     ],
     anwendung: 'Beschreibe 5 Dinge in deiner Umgebung mit Adjektiven auf Türkisch.',
     zusammenfassung: 'Adjektiv steht vor dem Nomen, ändert sich nicht. Çok = sehr. Güzel büyük küçük yeni eski iyi kötü — 7 Adjektive für den Start!'
+  },
+
+  // ── Familie & Personen ─────────────────────────────────────────
+  'Beziehungen & Freunde': {
+    lernziel: 'Beziehungen und Freundschaften auf Türkisch beschreiben.',
+    woerter: [
+      { tr: 'arkadaş',       de: 'Freund / Freundin',         extra: 'arkadaşım = mein Freund' },
+      { tr: 'en iyi arkadaş',de: 'bester Freund / beste Freundin' },
+      { tr: 'komşu',         de: 'Nachbar / Nachbarin' },
+      { tr: 'sevgili',       de: 'Liebling / Geliebte(r)',    extra: 'auch: Liebe(r)' },
+      { tr: 'nişanlı',       de: 'Verlobte(r)' },
+      { tr: 'evli',          de: 'verheiratet' },
+      { tr: 'bekar',         de: 'ledig' },
+      { tr: 'çift',          de: 'Paar / Ehepaar' },
+      { tr: 'tanışmak',      de: 'kennenlernen' },
+      { tr: 'tanıştırmak',   de: 'vorstellen (jmd. anderen)' },
+      { tr: 'sevmek',        de: 'lieben / mögen' },
+      { tr: 'özlemek',       de: 'vermissen' },
+    ],
+    erklaerung: 'Possessivsuffix -ım/-im/-um/-üm = mein: arkadaş-ım = mein Freund, komşu-m = mein Nachbar.',
+    beispiele: [
+      { tr: 'O benim en iyi arkadaşım.',         de: 'Er/Sie ist mein bester Freund / meine beste Freundin.' },
+      { tr: 'Komşularımla iyi geçiniyorum.',      de: 'Ich komme gut mit meinen Nachbarn aus.' },
+      { tr: 'Seni özledim.',                      de: 'Ich habe dich vermisst.' },
+      { tr: 'Arkadaşımı sana tanıştırayım.',      de: 'Lass mich dir meinen Freund vorstellen.' },
+    ],
+    gespräche: [
+      { sprecher: 'A', tr: 'Bu kim?', de: 'Wer ist das?' },
+      { sprecher: 'B', tr: 'O benim arkadaşım Elif.', de: 'Das ist meine Freundin Elif.' },
+      { sprecher: 'A', tr: 'Memnun oldum, Elif!', de: 'Freut mich, Elif!' },
+      { sprecher: 'B', tr: 'Ben de! Nerelisin?', de: 'Mich auch! Woher kommst du?' },
+    ],
+    anwendung: 'Beschreibe auf Türkisch: Bist du ledig oder verheiratet? Wie heißt dein bester Freund?',
+    zusammenfassung: 'arkadaş = Freund, evli = verheiratet, bekar = ledig, sevmek = lieben, özlemek = vermissen.'
+  },
+
+  'Eigenschaften & Charakter': {
+    lernziel: 'Charaktereigenschaften auf Türkisch beschreiben.',
+    woerter: [
+      { tr: 'güzel',       de: 'schön / hübsch' },
+      { tr: 'yakışıklı',   de: 'gut aussehend (Mann)' },
+      { tr: 'zeki',        de: 'intelligent / klug' },
+      { tr: 'komik',       de: 'lustig / komisch' },
+      { tr: 'kibar',       de: 'höflich / nett' },
+      { tr: 'nazik',       de: 'freundlich / sanft' },
+      { tr: 'çalışkan',    de: 'fleißig' },
+      { tr: 'tembel',      de: 'faul' },
+      { tr: 'sabırlı',     de: 'geduldig' },
+      { tr: 'sinirli',     de: 'genervt / reizbar' },
+      { tr: 'cesur',       de: 'mutig' },
+      { tr: 'utangaç',     de: 'schüchtern' },
+      { tr: 'dürüst',      de: 'ehrlich' },
+      { tr: 'güvenilir',   de: 'zuverlässig' },
+    ],
+    erklaerung: 'Eigenschaften stehen direkt vor dem Nomen (güzel kız = schönes Mädchen) oder nach dem Verb olmak: Çok sabırlı. Das Adjektiv verändert sich nicht.',
+    beispiele: [
+      { tr: 'Annem çok nazik.',                      de: 'Meine Mutter ist sehr freundlich.' },
+      { tr: 'Kardeşim biraz tembel ama çok komik.',  de: 'Mein Geschwisterkind ist etwas faul, aber sehr lustig.' },
+      { tr: 'O çok dürüst bir insan.',               de: 'Er/Sie ist ein sehr ehrlicher Mensch.' },
+      { tr: 'Zeki ama utangaç.',                     de: 'Klug aber schüchtern.' },
+    ],
+    gespräche: [
+      { sprecher: 'A', tr: 'Arkadaşın nasıl biri?', de: 'Was für ein Mensch ist dein Freund?' },
+      { sprecher: 'B', tr: 'Çok komik ve zeki.', de: 'Sehr lustig und klug.' },
+      { sprecher: 'A', tr: 'Kibar mı?', de: 'Ist er höflich?' },
+      { sprecher: 'B', tr: 'Evet, çok kibar ve güvenilir.', de: 'Ja, sehr höflich und zuverlässig.' },
+    ],
+    anwendung: 'Beschreibe eine Person aus deiner Familie mit mindestens 3 Eigenschaften auf Türkisch.',
+    zusammenfassung: 'zeki = klug, çalışkan = fleißig, tembel = faul, kibar = höflich, dürüst = ehrlich. Çok davor = sehr.'
+  },
+
+  // ── Zahlen & Mengen ────────────────────────────────────────────
+  'Ordinalzahlen & Mengen': {
+    lernziel: 'Ordinalzahlen (erster, zweiter…) und Mengenangaben auf Türkisch.',
+    woerter: [
+      { tr: 'birinci',     de: 'erste(r/s)',        extra: 'bir → birinci' },
+      { tr: 'ikinci',      de: 'zweite(r/s)',        extra: 'iki → ikinci' },
+      { tr: 'üçüncü',      de: 'dritte(r/s)',        extra: 'üç → üçüncü' },
+      { tr: 'dördüncü',    de: 'vierte(r/s)' },
+      { tr: 'beşinci',     de: 'fünfte(r/s)' },
+      { tr: 'son',         de: 'letzte(r/s)' },
+      { tr: 'tane',        de: 'Stück (Zählwort)',   extra: 'üç tane elma = drei Äpfel' },
+      { tr: 'kilo',        de: 'Kilogramm' },
+      { tr: 'gram',        de: 'Gramm' },
+      { tr: 'litre',       de: 'Liter' },
+      { tr: 'yarım',       de: 'ein halb',           extra: 'yarım kilo = ein halbes Kilo' },
+      { tr: 'çeyrek',      de: 'ein Viertel' },
+      { tr: 'birkaç',      de: 'ein paar / einige' },
+      { tr: 'hiç',         de: 'gar nicht / kein',  extra: 'hiç para yok = kein Geld' },
+    ],
+    erklaerung: 'Ordinalzahl: Zahl + -(i)nci/-ıncı/-uncu/-üncü je nach Vokalharmonie. Mengenwörter (tane, kilo) stehen nach der Zahl: beş tane = fünf Stück.',
+    beispiele: [
+      { tr: 'Ben birinci sıraya oturuyorum.',  de: 'Ich sitze in der ersten Reihe.' },
+      { tr: 'İki kilo domates lütfen.',        de: 'Zwei Kilo Tomaten bitte.' },
+      { tr: 'Birkaç dakika bekleyin lütfen.',  de: 'Warten Sie bitte ein paar Minuten.' },
+      { tr: 'Hiç problem yok.',               de: 'Kein Problem.' },
+    ],
+    anwendung: 'Übe: Nenne die ersten 5 Ordinalzahlen laut. Dann: Wie viel von was kaufst du gerade ein?',
+    zusammenfassung: 'birinci/ikinci/üçüncü = erste/zweite/dritte. tane = Stück, yarım = halb, birkaç = einige, hiç = gar nicht.'
+  },
+
+  // ── Essen & Trinken ───────────────────────────────────────────
+  'Türkische Gerichte': {
+    lernziel: 'Typische türkische Gerichte kennen und benennen.',
+    woerter: [
+      { tr: 'döner',       de: 'Döner (Fleisch am Spieß)' },
+      { tr: 'kebap',       de: 'Kebab / Grillfleisch' },
+      { tr: 'köfte',       de: 'Hackfleischbällchen' },
+      { tr: 'börek',       de: 'Blätterteiggebäck (herzhaft)' },
+      { tr: 'pilav',       de: 'Pilaw / Reisgericht' },
+      { tr: 'çorba',       de: 'Suppe' },
+      { tr: 'mercimek çorbası', de: 'Linsensuppe' },
+      { tr: 'baklava',     de: 'Baklava (süßes Gebäck)' },
+      { tr: 'ayran',       de: 'Joghurtgetränk (gesalzen)' },
+      { tr: 'çay',         de: 'Tee (Schwarztee)' },
+      { tr: 'kahve',       de: 'Kaffee' },
+      { tr: 'simit',       de: 'Sesamkringel / türkisches Bagel' },
+      { tr: 'meze',        de: 'Vorspeisen / Beilagenauswahl' },
+      { tr: 'lahmacun',    de: 'Türkische Dünnbrot-Pizza' },
+    ],
+    erklaerung: 'In der Türkei ist Essen Kultur. Gerichte werden oft geteilt (meze). Çay wird immer angeboten — ablehnen ist ungewöhnlich!',
+    beispiele: [
+      { tr: 'Bir mercimek çorbası alabilir miyim?', de: 'Kann ich eine Linsensuppe bekommen?' },
+      { tr: 'Baklava çok tatlı!',                  de: 'Baklava ist sehr süß!' },
+      { tr: 'Hangi yemekleri önerirsiniz?',         de: 'Welche Gerichte empfehlen Sie?' },
+      { tr: 'Pilav ve köfte lütfen.',               de: 'Pilaw und Köfte bitte.' },
+    ],
+    gespräche: [
+      { sprecher: 'A', tr: 'Açsın mısın?', de: 'Hast du Hunger?' },
+      { sprecher: 'B', tr: 'Evet, çok açım! Ne yiyelim?', de: 'Ja, ich habe großen Hunger! Was sollen wir essen?' },
+      { sprecher: 'A', tr: 'Döner mi, köfte mi?', de: 'Döner oder Köfte?' },
+      { sprecher: 'B', tr: 'Köfte olsun. Ve bir ayran.', de: 'Köfte bitte. Und ein Ayran.' },
+    ],
+    anwendung: 'Welches türkische Gericht kennst du schon? Sag es auf Türkisch und erkläre es kurz auf Deutsch.',
+    zusammenfassung: 'döner, kebap, köfte, börek, pilav, çorba, baklava, ayran, simit — typisch türkisch!'
+  },
+
+  // ── Mein Zuhause ──────────────────────────────────────────────
+  'Möbel & Einrichtung': {
+    lernziel: 'Möbel und Einrichtungsgegenstände auf Türkisch benennen.',
+    woerter: [
+      { tr: 'koltuk',      de: 'Sessel / Couch' },
+      { tr: 'masa',        de: 'Tisch' },
+      { tr: 'sandalye',    de: 'Stuhl' },
+      { tr: 'yatak',       de: 'Bett' },
+      { tr: 'dolap',       de: 'Schrank' },
+      { tr: 'raf',         de: 'Regal' },
+      { tr: 'halı',        de: 'Teppich' },
+      { tr: 'pencere',     de: 'Fenster' },
+      { tr: 'kapı',        de: 'Tür' },
+      { tr: 'lamba',       de: 'Lampe' },
+      { tr: 'ayna',        de: 'Spiegel' },
+      { tr: 'televizyon',  de: 'Fernseher' },
+      { tr: 'buzdolabı',   de: 'Kühlschrank' },
+      { tr: 'çamaşır makinesi', de: 'Waschmaschine' },
+    ],
+    erklaerung: 'Türkisch beschreibt Möbel direkt: "Masanın üstünde" = auf dem Tisch (üst = Oberseite + -de = Lokalsuffix).',
+    beispiele: [
+      { tr: 'Koltuk çok rahat.',                   de: 'Der Sessel ist sehr bequem.' },
+      { tr: 'Dolap oturma odasında.',              de: 'Der Schrank ist im Wohnzimmer.' },
+      { tr: 'Masanın üstünde bir lamba var.',      de: 'Auf dem Tisch steht eine Lampe.' },
+      { tr: 'Yatak odamda büyük bir ayna var.',    de: 'In meinem Schlafzimmer gibt es einen großen Spiegel.' },
+    ],
+    anwendung: 'Schau dich um und benenne 5 Möbelstücke in deiner Umgebung auf Türkisch.',
+    zusammenfassung: 'koltuk=Sessel, masa=Tisch, sandalye=Stuhl, yatak=Bett, dolap=Schrank, pencere=Fenster, kapı=Tür.'
+  },
+
+  'In der Stadt & Verkehr': {
+    lernziel: 'Orte in der Stadt und Transportmittel auf Türkisch benennen.',
+    woerter: [
+      { tr: 'market',      de: 'Supermarkt' },
+      { tr: 'hastane',     de: 'Krankenhaus' },
+      { tr: 'eczane',      de: 'Apotheke' },
+      { tr: 'okul',        de: 'Schule' },
+      { tr: 'banka',       de: 'Bank' },
+      { tr: 'postane',     de: 'Post / Postamt' },
+      { tr: 'park',        de: 'Park' },
+      { tr: 'restoran',    de: 'Restaurant' },
+      { tr: 'otobüs',      de: 'Bus' },
+      { tr: 'metro',       de: 'U-Bahn' },
+      { tr: 'taksi',       de: 'Taxi' },
+      { tr: 'istasyon',    de: 'Bahnhof / Station' },
+      { tr: 'sağa',        de: 'rechts (Richtung)',     extra: 'sağa dön = rechts abbiegen' },
+      { tr: 'sola',        de: 'links (Richtung)',      extra: 'sola dön = links abbiegen' },
+      { tr: 'düz git',     de: 'geradeaus gehen' },
+    ],
+    erklaerung: 'Richtungsangaben: sağa = nach rechts, sola = nach links, düz git = geradeaus. Nerede? = Wo? Nasıl gidebilirim? = Wie kann ich dort hingehen?',
+    beispiele: [
+      { tr: 'En yakın eczane nerede?',       de: 'Wo ist die nächste Apotheke?' },
+      { tr: 'Otobüs durağı nerede?',         de: 'Wo ist die Bushaltestelle?' },
+      { tr: 'Sağa dön, sonra düz git.',      de: 'Rechts abbiegen, dann geradeaus.' },
+      { tr: 'Taksi ile gidebilirsiniz.',     de: 'Sie können mit dem Taxi fahren.' },
+    ],
+    gespräche: [
+      { sprecher: 'A', tr: 'Affedersiniz, market nerede?', de: 'Entschuldigung, wo ist der Supermarkt?' },
+      { sprecher: 'B', tr: 'Düz gidin, sonra sola dönün.', de: 'Gehen Sie geradeaus, dann links.' },
+      { sprecher: 'A', tr: 'Yürüyerek kaç dakika?', de: 'Wie viele Minuten zu Fuß?' },
+      { sprecher: 'B', tr: 'Yaklaşık on dakika.', de: 'Ungefähr zehn Minuten.' },
+    ],
+    anwendung: 'Erkläre auf Türkisch den Weg von deiner Wohnung zu einer Schule oder einem Supermarkt.',
+    zusammenfassung: 'market, hastane, eczane, okul, otobüs, metro, taksi. sağa=rechts, sola=links, düz git=geradeaus.'
+  },
+
+  // ── Wetter ────────────────────────────────────────────────────
+  'Jahreszeiten & Aktivitäten': {
+    lernziel: 'Jahreszeiten und passende Aktivitäten auf Türkisch beschreiben.',
+    woerter: [
+      { tr: 'ilkbahar',    de: 'Frühling' },
+      { tr: 'yaz',         de: 'Sommer' },
+      { tr: 'sonbahar',    de: 'Herbst' },
+      { tr: 'kış',         de: 'Winter' },
+      { tr: 'yüzmek',      de: 'schwimmen' },
+      { tr: 'kayak yapmak',de: 'Ski fahren' },
+      { tr: 'piknik yapmak',de: 'picknicken' },
+      { tr: 'yürüyüşe çıkmak', de: 'wandern gehen' },
+      { tr: 'tatile gitmek',   de: 'in den Urlaub fahren' },
+      { tr: 'sıcak',       de: 'heiß / warm' },
+      { tr: 'soğuk',       de: 'kalt' },
+      { tr: 'serin',       de: 'kühl' },
+      { tr: 'ılık',        de: 'lauwarm / mild' },
+    ],
+    erklaerung: 'Jahreszeiten + -de/-da = im Sommer/Winter: yazın (im Sommer), kışın (im Winter). Diese Form ist unregelmäßig.',
+    beispiele: [
+      { tr: 'Yazın denize gidiyorum.',           de: 'Im Sommer fahre ich ans Meer.' },
+      { tr: 'Kışın kayak yapmayı seviyorum.',    de: 'Im Winter liebe ich Skifahren.' },
+      { tr: 'İlkbaharda hava çok güzel olur.',   de: 'Im Frühling ist das Wetter sehr schön.' },
+      { tr: 'Sonbaharda yapraklar dökülür.',     de: 'Im Herbst fallen die Blätter.' },
+    ],
+    gespräche: [
+      { sprecher: 'A', tr: 'En sevdiğin mevsim hangisi?', de: 'Welche Jahreszeit magst du am liebsten?' },
+      { sprecher: 'B', tr: 'Yaz! Çünkü yüzmeyi seviyorum.', de: 'Sommer! Weil ich gerne schwimme.' },
+      { sprecher: 'A', tr: 'Ben kışı seviyorum. Kayak çok güzel.', de: 'Ich mag den Winter. Skifahren ist toll.' },
+    ],
+    anwendung: 'Welche Jahreszeit magst du am liebsten und warum? Schreibe 2 Sätze auf Türkisch.',
+    zusammenfassung: 'ilkbahar=Frühling, yaz=Sommer, sonbahar=Herbst, kış=Winter. yazın=im Sommer, kışın=im Winter.'
+  },
+
+  // ── Körper & Gesundheit ───────────────────────────────────────
+  'Gefühle & Emotionen': {
+    lernziel: 'Gefühle und emotionale Zustände auf Türkisch ausdrücken.',
+    woerter: [
+      { tr: 'mutlu',       de: 'glücklich / froh' },
+      { tr: 'üzgün',       de: 'traurig' },
+      { tr: 'kızgın',      de: 'wütend / ärgerlich' },
+      { tr: 'korku',       de: 'Angst / Furcht' },
+      { tr: 'korkmuş',     de: 'verängstigt / erschrocken' },
+      { tr: 'şaşkın',      de: 'überrascht / verwirrt' },
+      { tr: 'yorgun',      de: 'müde' },
+      { tr: 'heyecanlı',   de: 'aufgeregt / begeistert' },
+      { tr: 'stresli',     de: 'gestresst' },
+      { tr: 'rahat',       de: 'entspannt / bequem' },
+      { tr: 'özlemek',     de: 'vermissen' },
+      { tr: 'sevmek',      de: 'lieben / mögen' },
+      { tr: 'nefret etmek',de: 'hassen' },
+    ],
+    erklaerung: 'Gefühle werden als Adjektiv benutzt: Ben çok mutluyum = Ich bin sehr glücklich (-yum = ich bin). Nasılsın? = Wie geht es dir?',
+    beispiele: [
+      { tr: 'Bugün çok mutluyum!',              de: 'Heute bin ich sehr glücklich!' },
+      { tr: 'Biraz üzgünüm, özür dilerim.',     de: 'Ich bin ein bisschen traurig, tut mir leid.' },
+      { tr: 'Neden bu kadar streslisin?',       de: 'Warum bist du so gestresst?' },
+      { tr: 'Seni görünce hep heyecanlanırım.', de: 'Wenn ich dich sehe, werde ich immer aufgeregt.' },
+    ],
+    gespräche: [
+      { sprecher: 'A', tr: 'Nasılsın bugün?', de: 'Wie geht es dir heute?' },
+      { sprecher: 'B', tr: 'Biraz yorgunum. Çok çalıştım.', de: 'Etwas müde. Ich habe viel gearbeitet.' },
+      { sprecher: 'A', tr: 'Üzgün müsün?', de: 'Bist du traurig?' },
+      { sprecher: 'B', tr: 'Hayır, sadece yorgunum. Sen nasılsın?', de: 'Nein, nur müde. Wie geht es dir?' },
+    ],
+    anwendung: 'Wie fühlst du dich gerade? Schreibe 3 Sätze über deine aktuellen Gefühle auf Türkisch.',
+    zusammenfassung: 'mutlu=glücklich, üzgün=traurig, kızgın=wütend, yorgun=müde, heyecanlı=aufgeregt, stresli=gestresst.'
+  },
+
+  'Beim Arzt': {
+    lernziel: 'Beim Arzt kommunizieren: Symptome beschreiben und verstehen.',
+    woerter: [
+      { tr: 'doktor',      de: 'Arzt / Ärztin' },
+      { tr: 'hasta',       de: 'krank / Patient' },
+      { tr: 'ağrı',        de: 'Schmerz' },
+      { tr: 'baş ağrısı',  de: 'Kopfschmerzen',    extra: 'baş = Kopf' },
+      { tr: 'karın ağrısı',de: 'Bauchschmerzen' },
+      { tr: 'ateş',        de: 'Fieber' },
+      { tr: 'öksürük',     de: 'Husten' },
+      { tr: 'nezle',       de: 'Erkältung / Schnupfen' },
+      { tr: 'grip',        de: 'Grippe' },
+      { tr: 'ilaç',        de: 'Medikament' },
+      { tr: 'reçete',      de: 'Rezept' },
+      { tr: 'muayene',     de: 'Untersuchung / Arzttermin' },
+      { tr: 'ambulans',    de: 'Krankenwagen' },
+    ],
+    erklaerung: 'Schmerz + Körperteil: baş ağrısı = Kopfschmerz, diş ağrısı = Zahnschmerz, bel ağrısı = Rückenschmerz. "Bende ağrı var" = Ich habe Schmerzen.',
+    beispiele: [
+      { tr: 'Çok hasta hissediyorum.',              de: 'Ich fühle mich sehr krank.' },
+      { tr: 'Başım çok ağrıyor.',                   de: 'Mein Kopf schmerzt sehr.' },
+      { tr: 'Ateşim var, öksürüyorum.',             de: 'Ich habe Fieber und Husten.' },
+      { tr: 'Doktora gitmem lazım.',                de: 'Ich muss zum Arzt gehen.' },
+    ],
+    gespräche: [
+      { sprecher: 'Doktor', tr: 'Nasılsınız, neyiniz var?', de: 'Wie geht es Ihnen, was haben Sie?' },
+      { sprecher: 'Hasta',  tr: 'Üç gündür ateşim var ve çok öksürüyorum.', de: 'Ich habe seit drei Tagen Fieber und huste viel.' },
+      { sprecher: 'Doktor', tr: 'Başka şikayetiniz var mı?', de: 'Haben Sie weitere Beschwerden?' },
+      { sprecher: 'Hasta',  tr: 'Evet, boğazım da ağrıyor.', de: 'Ja, mein Hals tut auch weh.' },
+    ],
+    anwendung: 'Übe: Beschreibe auf Türkisch wie du dich fühlst, wenn du krank bist.',
+    zusammenfassung: 'hasta=krank, ağrı=Schmerz, ateş=Fieber, öksürük=Husten, nezle=Erkältung, ilaç=Medikament, reçete=Rezept.'
+  },
+
+  // ── Grammatik A1 ──────────────────────────────────────────────
+  'Possessivsuffixe': {
+    lernziel: 'Possessivsuffixe benutzen: mein, dein, sein/ihr auf Türkisch.',
+    woerter: [
+      { tr: '-ım / -im / -um / -üm', de: 'mein (ich)',           extra: 'evim = mein Haus' },
+      { tr: '-ın / -in / -un / -ün', de: 'dein (du)',            extra: 'evin = dein Haus' },
+      { tr: '-ı / -i / -u / -ü',    de: 'sein / ihr (er/sie)',   extra: 'evi = sein/ihr Haus' },
+      { tr: 'evim',        de: 'mein Haus' },
+      { tr: 'evin',        de: 'dein Haus' },
+      { tr: 'evi',         de: 'sein / ihr Haus' },
+      { tr: 'arabam',      de: 'mein Auto' },
+      { tr: 'araban',      de: 'dein Auto' },
+      { tr: 'kitabım',     de: 'mein Buch' },
+      { tr: 'adım',        de: 'mein Name' },
+      { tr: 'ailem',       de: 'meine Familie' },
+      { tr: 'arkadaşım',   de: 'mein Freund / meine Freundin' },
+    ],
+    erklaerung: 'Possessivsuffixe werden direkt ans Nomen gehängt. Vokalharmonie: nach a/ı → -ım, nach e/i → -im, nach o/u → -um, nach ö/ü → -üm. Wichtig: Konsonanten können sich verändern (kitap → kitabım).',
+    beispiele: [
+      { tr: 'Benim adım Berkay.',          de: 'Mein Name ist Berkay.' },
+      { tr: 'Senin evin çok büyük.',       de: 'Dein Haus ist sehr groß.' },
+      { tr: 'Onun arabası çok hızlı.',     de: 'Sein/Ihr Auto ist sehr schnell.' },
+      { tr: 'Ailem İstanbul\'da yaşıyor.', de: 'Meine Familie lebt in Istanbul.' },
+    ],
+    anwendung: 'Übe: Schreibe "mein Name, dein Buch, sein Freund, meine Familie" auf Türkisch.',
+    zusammenfassung: '-ım = mein, -ın = dein, -ı = sein/ihr. Vokalharmonie beachten! evim=mein Haus, araban=dein Auto.'
+  },
+
+  'Lokalkasus: -de/-da/-den/-dan': {
+    lernziel: 'Den Ort ausdrücken: wo etwas ist (-de/-da) und woher (-den/-dan).',
+    woerter: [
+      { tr: '-de / -da',    de: 'in / an / auf (Ort)',     extra: 'evde = zu Hause; parkta = im Park' },
+      { tr: '-den / -dan',  de: 'aus / von (Herkunft)',    extra: 'evden = von zu Hause; Almanya\'dan = aus Deutschland' },
+      { tr: 'evde',         de: 'zu Hause / im Haus' },
+      { tr: 'okulda',       de: 'in der Schule' },
+      { tr: 'markette',     de: 'im Supermarkt' },
+      { tr: 'Türkiye\'de',  de: 'in der Türkei' },
+      { tr: 'Almanya\'da',  de: 'in Deutschland' },
+      { tr: 'evden',        de: 'von zu Hause' },
+      { tr: 'okuldan',      de: 'von der Schule' },
+      { tr: 'Almanya\'dan', de: 'aus Deutschland' },
+      { tr: 'nerede',       de: 'wo?' },
+      { tr: 'nereden',      de: 'woher?' },
+    ],
+    erklaerung: 'Vokalharmonie: nach e/i/ö/ü → -de/-den, nach a/ı/o/u → -da/-dan. Nach stimmlosem Konsonant (ç,f,h,k,p,s,ş,t) → -te/-tan statt -de/-dan: markette (nicht markede).',
+    beispiele: [
+      { tr: 'Ben şimdi evdeyim.',           de: 'Ich bin jetzt zu Hause.' },
+      { tr: 'O Almanya\'dan geldi.',        de: 'Er/Sie kam aus Deutschland.' },
+      { tr: 'Nerede oturuyorsun?',          de: 'Wo wohnst du?' },
+      { tr: 'Nereden geliyorsun?',          de: 'Woher kommst du?' },
+    ],
+    gespräche: [
+      { sprecher: 'A', tr: 'Şu an neredesin?', de: 'Wo bist du gerade?' },
+      { sprecher: 'B', tr: 'Kütüphanedeyim. Sen?', de: 'Ich bin in der Bibliothek. Du?' },
+      { sprecher: 'A', tr: 'Ben evden çalışıyorum.', de: 'Ich arbeite von zu Hause.' },
+    ],
+    anwendung: 'Übe: Wo bist du gerade? Woher kommst du? Beantworte diese Fragen auf Türkisch mit -de und -den.',
+    zusammenfassung: '-de/-da = in/an (Ort). -den/-dan = aus/von (Herkunft). nerede=wo?, nereden=woher? Vokalharmonie!'
   }
 };
 
@@ -1087,6 +1451,7 @@ const CATEGORY_DATA = [
   { title: 'Zahlen & Mengen', lessons: [
     { title: 'Zahlen 1–10', progress: 0 },
     { title: 'Zahlen 11–100', progress: 0 },
+    { title: 'Ordinalzahlen & Mengen', progress: 0 },
   ]},
   { title: 'Farben & Beschreibungen', lessons: [
     { title: 'Farben lernen', progress: 0 },
@@ -1095,11 +1460,14 @@ const CATEGORY_DATA = [
   ]},
   { title: 'Familie & Personen', lessons: [
     { title: 'Familienmitglieder', progress: 0 },
+    { title: 'Beziehungen & Freunde', progress: 0 },
+    { title: 'Eigenschaften & Charakter', progress: 0 },
   ]},
   { title: 'Essen & Trinken', lessons: [
     { title: 'Im Café — Bestellen', progress: 0 },
     { title: 'Lebensmittel & Zutaten', progress: 0 },
     { title: 'Essen bestellen', progress: 0 },
+    { title: 'Türkische Gerichte', progress: 0 },
   ]},
   { title: 'Uhrzeit & Kalender', lessons: [
     { title: 'Die Uhrzeit', progress: 0 },
@@ -1108,16 +1476,23 @@ const CATEGORY_DATA = [
   ]},
   { title: 'Mein Zuhause', lessons: [
     { title: 'Das Haus & Zimmer', progress: 0 },
+    { title: 'Möbel & Einrichtung', progress: 0 },
+    { title: 'In der Stadt & Verkehr', progress: 0 },
   ]},
   { title: 'Wetter', lessons: [
     { title: 'Wetter beschreiben', progress: 0 },
+    { title: 'Jahreszeiten & Aktivitäten', progress: 0 },
   ]},
   { title: 'Körper & Gesundheit', lessons: [
     { title: 'Körper & Beschwerden', progress: 0 },
+    { title: 'Gefühle & Emotionen', progress: 0 },
+    { title: 'Beim Arzt', progress: 0 },
   ]},
   { title: 'Grammatik A1', lessons: [
     { title: 'Verben im Präsens', progress: 0 },
     { title: 'Verneinung & Fragen', progress: 0 },
+    { title: 'Possessivsuffixe', progress: 0 },
+    { title: 'Lokalkasus: -de/-da/-den/-dan', progress: 0 },
   ]},
 ];
 
@@ -1392,7 +1767,12 @@ function showDashboard(name) {
 
   const allLessons = CATEGORY_DATA.flatMap(c => c.lessons);
   const totalSum = allLessons.reduce((acc, l) => acc + l.progress, 0);
-  const overall = allLessons.length > 0 ? Math.round(totalSum / allLessons.length) : 0;
+  // Each fully-complete category (all lessons + test) adds bonus points
+  const completedCats = CATEGORY_DATA.filter(c => isCategoryFullyComplete(c.title)).length;
+  const lessonPct = allLessons.length > 0 ? Math.round(totalSum / allLessons.length) : 0;
+  // Weight: 80% lessons, 20% category completions
+  const catBonus = CATEGORY_DATA.length > 0 ? Math.round((completedCats / CATEGORY_DATA.length) * 100) : 0;
+  const overall = Math.round(lessonPct * 0.8 + catBonus * 0.2);
   document.getElementById('overall-percent').innerText = overall + '%';
   document.getElementById('overall-fill').style.width = overall + '%';
 
@@ -1460,6 +1840,56 @@ function showCategory(categoryTitle, index) {
     item.appendChild(barBg);
     lessonCards.appendChild(item);
   });
+
+  // ── Final Test & Completion Banner ──────────────────────────
+  const user = getCurrentUser();
+  const testPassed = user ? getCategoryTestPassed(user.email, categoryTitle) : false;
+  const lessonsAllDone = allLessonsDone(categoryTitle);
+
+  const finalTestWrap = document.createElement('div');
+  finalTestWrap.className = 'ct-final-wrap';
+
+  if (testPassed) {
+    // Category fully complete
+    finalTestWrap.innerHTML = `
+      <div class="ct-complete-banner">
+        <span class="ct-complete-icon">🏆</span>
+        <div>
+          <div class="ct-complete-title">Container abgeschlossen!</div>
+          <div class="ct-complete-sub">Alle Lektionen + Abschlusstest bestanden</div>
+        </div>
+      </div>
+    `;
+  } else if (lessonsAllDone) {
+    // All lessons done — test available
+    finalTestWrap.innerHTML = `
+      <div class="ct-test-available">
+        <div class="ct-test-info">
+          <span class="ct-test-icon">📝</span>
+          <div>
+            <div class="ct-test-title">Abschlusstest verfügbar!</div>
+            <div class="ct-test-sub">12 Fragen aus allen Lektionen · Mindestens 70% zum Bestehen</div>
+          </div>
+        </div>
+        <button class="ct-start-btn" onclick="startCategoryTest('${categoryTitle.replace(/'/g, "\\'")}')">
+          Test starten →
+        </button>
+      </div>
+    `;
+  } else {
+    // Not all lessons done yet — show how many are left
+    const done = category.lessons.filter(l => l.progress === 100).length;
+    const remaining = category.lessons.length - done;
+    finalTestWrap.innerHTML = `
+      <div class="ct-test-locked">
+        <span class="ct-test-lock-icon">🔒</span>
+        <div class="ct-test-locked-text">
+          Abschlusstest: noch ${remaining} Lektion${remaining === 1 ? '' : 'en'} abzuschließen
+        </div>
+      </div>
+    `;
+  }
+  lessonCards.appendChild(finalTestWrap);
 }
 
 function backToCategories() {
@@ -2186,6 +2616,7 @@ function completeLesson(categoryTitle, lessonTitle) {
 
   const lessonContent = LESSON_CONTENT[lessonTitle];
   initWordsFromLesson(user.email, lessonContent);
+  addWordsFromLesson(user.email, lessonTitle, categoryTitle);
 
   const cat = CATEGORY_DATA.find(c => c.title === categoryTitle);
   if (cat) {
@@ -2216,6 +2647,195 @@ function completeLesson(categoryTitle, lessonTitle) {
 }
 
 // =============================================
+// CATEGORY FINAL TEST SYSTEM
+// =============================================
+
+function getCategoryTestPassed(email, catTitle) {
+  return localStorage.getItem('cattest_' + email + '_' + catTitle) === 'passed';
+}
+
+function setCategoryTestPassed(email, catTitle) {
+  localStorage.setItem('cattest_' + email + '_' + catTitle, 'passed');
+}
+
+function allLessonsDone(catTitle) {
+  const cat = CATEGORY_DATA.find(c => c.title === catTitle);
+  if (!cat) return false;
+  return cat.lessons.every(l => l.progress === 100);
+}
+
+function isCategoryFullyComplete(catTitle) {
+  const user = getCurrentUser();
+  if (!user) return false;
+  return allLessonsDone(catTitle) && getCategoryTestPassed(user.email, catTitle);
+}
+
+// Generates 12 randomized questions from all lessons in a category
+function generateCategoryTestQuestions(catTitle) {
+  const cat = CATEGORY_DATA.find(c => c.title === catTitle);
+  if (!cat) return [];
+
+  // Collect all valid words from this category
+  const allWords = [];
+  cat.lessons.forEach(lesson => {
+    const lc = LESSON_CONTENT[lesson.title];
+    if (!lc || !lc.woerter) return;
+    lc.woerter.forEach(w => {
+      if (w.tr && w.de && !w.de.startsWith('"') && !w.tr.startsWith('-') && w.de.length < 40) {
+        allWords.push({ tr: w.tr, de: w.de });
+      }
+    });
+  });
+
+  if (allWords.length < 4) return [];
+
+  // Shuffle and pick up to 12
+  const shuffled = [...allWords].sort(() => Math.random() - 0.5);
+  const selected = shuffled.slice(0, Math.min(12, shuffled.length));
+
+  return selected.map((word, i) => {
+    // Wrong answers come from within the same category (harder!)
+    const pool = allWords.filter(w => w.tr !== word.tr);
+    const wrong = pool.sort(() => Math.random() - 0.5).slice(0, 3);
+
+    if (i % 2 === 0) {
+      // TR → DE
+      const opts = [word.de, ...wrong.map(w => w.de)].sort(() => Math.random() - 0.5);
+      return { type: 'tr-de', question: word.tr, correct: word.de, options: opts };
+    } else {
+      // DE → TR
+      const opts = [word.tr, ...wrong.map(w => w.tr)].sort(() => Math.random() - 0.5);
+      return { type: 'de-tr', question: word.de, correct: word.tr, options: opts };
+    }
+  });
+}
+
+let catTestState = { catTitle: '', questions: [], index: 0, correct: 0, answered: false };
+
+function startCategoryTest(catTitle) {
+  const questions = generateCategoryTestQuestions(catTitle);
+  if (questions.length < 4) { showToast('Zu wenig Vokabeln für den Test — schließe zuerst alle Lektionen ab!'); return; }
+
+  catTestState = { catTitle, questions, index: 0, correct: 0, answered: false };
+
+  // Hide lesson list, show detail view
+  document.getElementById('lesson-list').classList.add('hidden');
+  const detailEl = document.getElementById('lesson-detail');
+  detailEl.classList.remove('hidden');
+  window.scrollTo(0, 0);
+
+  renderCategoryTestQuestion();
+}
+
+function renderCategoryTestQuestion() {
+  const { catTitle, questions, index } = catTestState;
+  const q = questions[index];
+  const total = questions.length;
+  const pct = Math.round((index / total) * 100);
+
+  const detailEl = document.getElementById('lesson-detail');
+  const typeLabel = q.type === 'tr-de' ? '🇹🇷 Türkisch → Deutsch' : '🇩🇪 Deutsch → Türkisch';
+  const diffBadge = index >= 8 ? '<span class="ct-hard-badge">Schwer</span>' : '';
+
+  detailEl.innerHTML = `
+    <div class="ct-header">
+      <button class="back-btn" onclick="backToLessonList()">← Abbrechen</button>
+      <div class="ct-title-row">
+        <span class="ct-title">🏆 Abschlusstest</span>
+        <span class="ct-category">${catTitle}</span>
+      </div>
+    </div>
+    <div class="ct-progress-wrap">
+      <div class="ct-progress-bg"><div class="ct-progress-fill" style="width:${pct}%"></div></div>
+      <span class="ct-counter">${index + 1} / ${total}</span>
+    </div>
+    <div class="ct-question-box">
+      <div class="ct-type-label">${typeLabel} ${diffBadge}</div>
+      <div class="ct-question-word">${q.question}</div>
+      <div class="ct-options" id="ct-options">
+        ${q.options.map((opt, oi) => `
+          <button class="ct-option-btn" onclick="answerCatTest(${oi})">${opt}</button>
+        `).join('')}
+      </div>
+    </div>
+    <div id="ct-feedback" class="ct-feedback"></div>
+  `;
+}
+
+function answerCatTest(optionIndex) {
+  if (catTestState.answered) return;
+  catTestState.answered = true;
+
+  const q = catTestState.questions[catTestState.index];
+  const chosen = q.options[optionIndex];
+  const isCorrect = chosen === q.correct;
+  if (isCorrect) catTestState.correct++;
+
+  // Highlight buttons
+  const btns = document.querySelectorAll('.ct-option-btn');
+  btns.forEach((btn, i) => {
+    btn.disabled = true;
+    if (q.options[i] === q.correct) btn.classList.add('ct-opt-correct');
+    else if (i === optionIndex && !isCorrect) btn.classList.add('ct-opt-wrong');
+  });
+
+  const fb = document.getElementById('ct-feedback');
+  if (fb) {
+    fb.textContent = isCorrect ? '✓ Richtig!' : '✗ Richtig wäre: ' + q.correct;
+    fb.className = 'ct-feedback ' + (isCorrect ? 'ct-fb-correct' : 'ct-fb-wrong');
+  }
+
+  setTimeout(() => {
+    catTestState.answered = false;
+    catTestState.index++;
+    if (catTestState.index >= catTestState.questions.length) {
+      showCategoryTestResult();
+    } else {
+      renderCategoryTestQuestion();
+    }
+  }, 1100);
+}
+
+function showCategoryTestResult() {
+  const { catTitle, questions, correct } = catTestState;
+  const total = questions.length;
+  const pct = Math.round((correct / total) * 100);
+  const passed = pct >= 70;
+
+  const user = getCurrentUser();
+  if (user && passed) {
+    setCategoryTestPassed(user.email, catTitle);
+  }
+
+  let emoji, grade, note;
+  if (pct === 100) { emoji = '🏆'; grade = 'Perfekt — Meisterklasse!'; note = 'Note 1'; }
+  else if (pct >= 90) { emoji = '⭐'; grade = 'Ausgezeichnet!'; note = 'Note 1'; }
+  else if (pct >= 80) { emoji = '💪'; grade = 'Sehr gut!'; note = 'Note 2'; }
+  else if (pct >= 70) { emoji = '✅'; grade = 'Bestanden!'; note = 'Note 3 — Container abgeschlossen!'; }
+  else if (pct >= 50) { emoji = '😓'; grade = 'Knapp nicht bestanden — du brauchst 70%!'; note = 'Nicht bestanden'; }
+  else { emoji = '🔄'; grade = 'Nochmal üben — du schaffst das!'; note = 'Nicht bestanden'; }
+
+  const detailEl = document.getElementById('lesson-detail');
+  detailEl.innerHTML = `
+    <div class="ct-result-box">
+      <div class="ct-result-emoji">${emoji}</div>
+      <div class="ct-result-grade">${grade}</div>
+      <div class="ct-result-score">${correct} von ${total} richtig — ${pct}%</div>
+      <div class="ct-result-note ${passed ? 'ct-note-pass' : 'ct-note-fail'}">${note}</div>
+      ${passed ? `
+        <div class="ct-result-complete">
+          🎉 Container <strong>${catTitle}</strong> vollständig abgeschlossen!
+        </div>
+        <button class="ct-result-btn ct-btn-primary" onclick="backToCategories()">Zurück zur Übersicht →</button>
+      ` : `
+        <button class="ct-result-btn ct-btn-retry" onclick="startCategoryTest('${catTitle.replace(/'/g, "\\'")}')">Nochmal versuchen 🔄</button>
+        <button class="ct-result-btn ct-btn-back" onclick="backToLessonList()">Zurück zu Lektionen</button>
+      `}
+    </div>
+  `;
+}
+
+// =============================================
 // RENDER CATEGORIES
 // =============================================
 
@@ -2223,13 +2843,18 @@ function renderCategories() {
   const categoryList = document.getElementById('category-list');
   categoryList.innerHTML = '';
 
+  const user = getCurrentUser();
+
   CATEGORY_DATA.forEach((category, index) => {
     const unlocked = isContainerUnlocked(index);
     const completed = category.lessons.filter(l => l.progress === 100).length;
     const overall = Math.round(category.lessons.reduce((s, l) => s + l.progress, 0) / category.lessons.length);
+    const fullyComplete = user ? isCategoryFullyComplete(category.title) : false;
 
     const card = document.createElement('div');
-    card.className = 'category-card' + (unlocked ? '' : ' category-locked');
+    card.className = 'category-card'
+      + (unlocked ? '' : ' category-locked')
+      + (fullyComplete ? ' category-complete' : '');
     card.onclick = () => showCategory(category.title, index);
 
     const gateCat = index >= 3 ? CATEGORY_DATA[index - 3] : null;
@@ -2239,20 +2864,26 @@ function renderCategories() {
     const visual = CATEGORY_VISUAL[category.title] || { icon: '📖', color: '#2e8b57' };
     card.style.setProperty('--cat-color', visual.color);
 
+    const completionBadge = fullyComplete
+      ? `<span class="cat-complete-badge">🏆 Abgeschlossen</span>`
+      : (unlocked && completed === category.lessons.length)
+        ? `<span class="cat-test-pending-badge">📝 Test ausstehend</span>`
+        : '';
+
     card.innerHTML = `
       <div class="category-card-top">
-        <div class="category-icon-badge" style="background:${visual.color}22">${unlocked ? visual.icon : '🔒'}</div>
+        <div class="category-icon-badge" style="background:${visual.color}22">${unlocked ? (fullyComplete ? '🏆' : visual.icon) : '🔒'}</div>
         <div style="flex:1;min-width:0">
           <h2 class="category-title">${category.title}</h2>
-          ${unlocked ? '' : `<span class="lock-hint">${gateDone}/${threshold} in "${gateCat.title}"</span>`}
+          ${unlocked ? completionBadge : `<span class="lock-hint">${gateDone}/${threshold} in "${gateCat.title}"</span>`}
         </div>
       </div>
       <div class="lesson-count-row">${completed}/${category.lessons.length} Lektionen abgeschlossen</div>
       <div class="progress-bar-bg">
-        <div class="progress-bar-fill" style="width:${overall}%"></div>
+        <div class="progress-bar-fill${fullyComplete ? ' fill-complete' : ''}" style="width:${fullyComplete ? 100 : overall}%"></div>
       </div>
       <div class="lesson-header" style="margin-top:8px">
-        <div>Fortschritt</div><div>${overall}%</div>
+        <div>Fortschritt</div><div>${fullyComplete ? '✓ 100%' : overall + '%'}</div>
       </div>
     `;
 
@@ -2353,6 +2984,301 @@ function forgotPassword() {
   localStorage.setItem('users', JSON.stringify(users));
   alert('Passwort geändert. Bitte melde dich jetzt an.');
   showLogin();
+}
+
+// =============================================
+// WORD BANK — Persönlicher Wortspeicher
+// =============================================
+
+const WB_INTERVALS = [0, 1, 3, 7, 14, 30, 60]; // Tage pro Level 0–6
+
+function getWordBank(email) {
+  return JSON.parse(localStorage.getItem('wordbank_' + email) || '{}');
+}
+function saveWordBank(email, bank) {
+  localStorage.setItem('wordbank_' + email, JSON.stringify(bank));
+}
+function makeWordId(tr) {
+  return 'wb_' + tr.toLowerCase().replace(/\s+/g, '_').replace(/[^\w\u00C0-\u024F]/g, '');
+}
+
+function addWordsFromLesson(email, lessonTitle, categoryTitle) {
+  const lc = LESSON_CONTENT[lessonTitle];
+  if (!lc || !lc.woerter) return;
+  const bank = getWordBank(email);
+  const now  = Date.now();
+  lc.woerter.forEach(w => {
+    if (!w.tr || !w.de || w.de.startsWith('"')) return;
+    const id = makeWordId(w.tr);
+    if (!bank[id]) {
+      bank[id] = {
+        id, tr: w.tr, de: w.de,
+        example: w.extra || '',
+        category: categoryTitle,
+        lessonTitle,
+        level: 0,
+        timesCorrect: 0, timesWrong: 0,
+        lastReviewed: null,
+        nextReview: now,
+        difficult: false,
+        addedAt: now
+      };
+    }
+  });
+  saveWordBank(email, bank);
+}
+
+function updateWordBankReview(email, wordId, result) {
+  const bank = getWordBank(email);
+  const w = bank[wordId];
+  if (!w) return;
+  const now = Date.now();
+  w.lastReviewed = now;
+  if (result === 'correct') {
+    w.timesCorrect++;
+    w.level = Math.min(6, w.level + 1);
+    w.difficult = false;
+    w.nextReview = now + WB_INTERVALS[w.level] * 86400000;
+  } else if (result === 'hard') {
+    w.timesCorrect++;
+    w.difficult = true;
+    const half = Math.max(1, Math.floor(WB_INTERVALS[w.level] / 2));
+    w.nextReview = now + half * 86400000;
+  } else {
+    w.timesWrong++;
+    w.level = Math.max(1, w.level - 1);
+    w.difficult = true;
+    w.nextReview = now + WB_INTERVALS[w.level] * 86400000;
+  }
+  saveWordBank(email, bank);
+}
+
+function getDueWordsFromBank(email, max) {
+  const bank = getWordBank(email);
+  const now  = Date.now();
+  const due  = Object.values(bank).filter(w => w.nextReview <= now);
+  due.sort((a, b) => (b.difficult - a.difficult) || (a.nextReview - b.nextReview));
+  return max ? due.slice(0, max) : due;
+}
+function getWordsByCategory(email, cat) {
+  const all = Object.values(getWordBank(email));
+  return cat ? all.filter(w => w.category === cat) : all;
+}
+function getDifficultWords(email) {
+  return Object.values(getWordBank(email)).filter(w => w.difficult);
+}
+function getAllWordCategories(email) {
+  return [...new Set(Object.values(getWordBank(email)).map(w => w.category))];
+}
+
+// =============================================
+// MEINE WÖRTER — View
+// =============================================
+
+function showMeineWoerter(filter, sort) {
+  const user = getCurrentUser();
+  if (!user) return;
+  ['category-list','lesson-list','lesson-detail','review-view',
+   'overall-progress','review-section','motto-banner'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.add('hidden');
+  });
+  document.getElementById('meine-woerter-view').classList.remove('hidden');
+  renderMWContent(filter || 'all', sort || 'nextReview');
+}
+
+function hideMeineWoerter() {
+  document.getElementById('meine-woerter-view').classList.add('hidden');
+  const user = getCurrentUser();
+  if (user) showDashboard(user.name);
+}
+
+function renderMWContent(filter, sort) {
+  const user  = getCurrentUser();
+  const bank  = getWordBank(user.email);
+  const now   = Date.now();
+  let words   = Object.values(bank);
+  const total = words.length;
+  const dueCount  = words.filter(w => w.nextReview <= now).length;
+  const hardCount = words.filter(w => w.difficult).length;
+  const cats  = getAllWordCategories(user.email);
+
+  if (filter === 'due')       words = words.filter(w => w.nextReview <= now);
+  else if (filter === 'hard') words = words.filter(w => w.difficult);
+  else if (filter !== 'all')  words = words.filter(w => w.category === filter);
+
+  if (sort === 'nextReview') words.sort((a,b) => a.nextReview - b.nextReview);
+  else if (sort === 'level') words.sort((a,b) => a.level - b.level);
+  else if (sort === 'alpha') words.sort((a,b) => a.tr.localeCompare(b.tr));
+
+  const filterOpts = [
+    `<option value="all"  ${filter==='all' ?'selected':''}>Alle (${total})</option>`,
+    `<option value="due"  ${filter==='due' ?'selected':''}>Fällig (${dueCount})</option>`,
+    `<option value="hard" ${filter==='hard'?'selected':''}>Schwierig (${hardCount})</option>`,
+    ...cats.map(c => `<option value="${c}" ${filter===c?'selected':''}>${c}</option>`)
+  ].join('');
+
+  const cardsHTML = words.length === 0
+    ? `<p class="mw-empty">Keine Wörter gefunden. Schließe eine Lektion ab!</p>`
+    : words.map(w => {
+        const due  = w.nextReview <= now;
+        const days = Math.max(0, Math.ceil((w.nextReview - now) / 86400000));
+        const acc  = (w.timesCorrect + w.timesWrong) > 0
+          ? Math.round(w.timesCorrect / (w.timesCorrect + w.timesWrong) * 100) : null;
+        return `<div class="mw-card ${w.difficult?'mw-card-hard':''} ${due?'mw-card-due':''}">
+          <div class="mw-card-top">
+            <span class="mw-tr">${w.tr}</span>
+            <span class="mw-badges">
+              ${w.difficult?'<span class="mwb mwb-hard">Schwer</span>':''}
+              ${due?'<span class="mwb mwb-due">Fällig</span>':''}
+              <span class="mwb mwb-lvl">Lvl ${w.level}</span>
+            </span>
+          </div>
+          <div class="mw-de">${w.de}</div>
+          ${w.example?`<div class="mw-ex">${w.example}</div>`:''}
+          <div class="mw-meta">
+            ${acc!==null?`<span>✓ ${acc}%</span>`:''}
+            <span>${due?'🔔 Jetzt':'⏱ '+days+'d'}</span>
+            <span class="mw-cat-tag">${w.category}</span>
+          </div>
+        </div>`;
+      }).join('');
+
+  const fcIds = JSON.stringify(words.map(w => w.id));
+  document.getElementById('meine-woerter-view').innerHTML = `
+    <div class="mw-header">
+      <button class="back-btn" onclick="hideMeineWoerter()">← Zurück</button>
+      <h2 class="mw-title">📚 Meine Wörter</h2>
+      <p class="mw-sub">${total} gespeichert · ${dueCount} fällig heute</p>
+    </div>
+    <div class="mw-controls">
+      <select class="mw-sel" onchange="renderMWContent(this.value,'${sort}')">${filterOpts}</select>
+      <select class="mw-sel" onchange="renderMWContent('${filter}',this.value)">
+        <option value="nextReview" ${sort==='nextReview'?'selected':''}>Nach Fälligkeit</option>
+        <option value="level"      ${sort==='level'     ?'selected':''}>Nach Level</option>
+        <option value="alpha"      ${sort==='alpha'     ?'selected':''}>A–Z</option>
+      </select>
+      ${words.length>0?`<button class="mw-fc-btn" onclick='startFlashcardSession(${fcIds})'>🃏 Karteikarten</button>`:''}
+    </div>
+    <div class="mw-list">${cardsHTML}</div>`;
+}
+
+// =============================================
+// KARTEIKARTENMODUS
+// =============================================
+
+let fcState = { words: [], index: 0, flipped: false };
+
+function startFlashcardSession(wordIds) {
+  const user = getCurrentUser();
+  if (!user) return;
+  const bank  = getWordBank(user.email);
+  const words = (Array.isArray(wordIds) ? wordIds : []).map(id => bank[id]).filter(Boolean);
+  if (words.length === 0) { showToast('Keine Wörter zum Üben.'); return; }
+  fcState = { words, index: 0, flipped: false };
+  ['meine-woerter-view','category-list','review-view','lesson-detail',
+   'lesson-list','overall-progress','review-section','motto-banner'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.add('hidden');
+  });
+  document.getElementById('flashcard-view').classList.remove('hidden');
+  renderFlashcard();
+  window.scrollTo(0, 0);
+}
+
+function startFlashcardFromDue() {
+  const user = getCurrentUser();
+  if (!user) return;
+  const due = getDueWordsFromBank(user.email, 20);
+  if (due.length > 0) {
+    startFlashcardSession(due.map(w => w.id));
+    return;
+  }
+  // No due words — check if any words exist at all
+  let all = Object.values(getWordBank(user.email));
+  if (all.length === 0) {
+    // Try to auto-populate from completed lessons
+    const progress = getProgressForUser(user.email);
+    let added = 0;
+    CATEGORY_DATA.forEach(cat => {
+      cat.lessons.forEach(lesson => {
+        if ((progress[cat.title + '|||' + lesson.title] || 0) === 100) {
+          addWordsFromLesson(user.email, lesson.title, cat.title);
+          added++;
+        }
+      });
+    });
+    all = Object.values(getWordBank(user.email));
+    if (all.length === 0) {
+      showToast('Schließe zuerst eine Lektion ab, um Wörter zu sammeln!');
+      return;
+    }
+  }
+  // Words exist but none due — offer to review all
+  startFlashcardSession(all.map(w => w.id));
+}
+
+function renderFlashcard() {
+  const { words, index, flipped } = fcState;
+  const w   = words[index];
+  const pct = Math.round((index / words.length) * 100);
+  document.getElementById('flashcard-view').innerHTML = `
+    <div class="fc-header">
+      <button class="back-btn" onclick="closeFlashcards()">← Beenden</button>
+      <span class="fc-counter">${index + 1} / ${words.length}</span>
+    </div>
+    <div class="fc-prog-bg"><div class="fc-prog-fill" style="width:${pct}%"></div></div>
+    <div class="fc-scene" onclick="flipFlashcard()">
+      <div class="fc-card ${flipped?'fc-flipped':''}" id="fc-card">
+        <div class="fc-face fc-front">
+          <div class="fc-label">Türkisch</div>
+          <div class="fc-word">${w.tr}</div>
+          <div class="fc-flip-hint">Tippen zum Umdrehen</div>
+          ${w.difficult?'<span class="fc-hard-badge">Schwer</span>':''}
+        </div>
+        <div class="fc-face fc-back">
+          <div class="fc-label">Deutsch</div>
+          <div class="fc-word fc-word-de">${w.de}</div>
+          ${w.example?`<div class="fc-example">${w.example}</div>`:''}
+          <div class="fc-back-cat">${w.category} · Lvl ${w.level}</div>
+        </div>
+      </div>
+    </div>
+    <div class="fc-btns ${flipped?'':'fc-btns-hidden'}">
+      <button class="fc-btn fc-btn-wrong"   onclick="answerFlashcard('wrong')">🔄<br><small>Nochmal</small></button>
+      <button class="fc-btn fc-btn-hard"    onclick="answerFlashcard('hard')">😅<br><small>War schwer</small></button>
+      <button class="fc-btn fc-btn-correct" onclick="answerFlashcard('correct')">✓<br><small>Wusste ich</small></button>
+    </div>`;
+}
+
+function flipFlashcard() {
+  fcState.flipped = !fcState.flipped;
+  const card = document.getElementById('fc-card');
+  if (card) card.classList.toggle('fc-flipped');
+  const btns = document.querySelector('.fc-btns');
+  if (btns) btns.classList.toggle('fc-btns-hidden', !fcState.flipped);
+}
+
+function answerFlashcard(result) {
+  const user = getCurrentUser();
+  updateWordBankReview(user.email, fcState.words[fcState.index].id, result);
+  const next = fcState.index + 1;
+  if (next >= fcState.words.length) {
+    closeFlashcards();
+    showToast('🎉 ' + fcState.words.length + ' Karten abgeschlossen!');
+    const u = getCurrentUser();
+    if (u) showDashboard(u.name);
+    return;
+  }
+  fcState.index   = next;
+  fcState.flipped = false;
+  renderFlashcard();
+}
+
+function closeFlashcards() {
+  document.getElementById('flashcard-view').classList.add('hidden');
+  const u = getCurrentUser();
+  if (u) showMeineWoerter();
 }
 
 // =============================================

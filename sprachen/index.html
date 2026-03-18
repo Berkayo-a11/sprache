@@ -222,6 +222,12 @@ window.addEventListener("DOMContentLoaded", function () {
       <!-- Motivations-Banner -->
       <div id="motto-banner" class="motto-banner"></div>
 
+      <!-- Schnellnavigation -->
+      <div class="dash-nav">
+        <button class="dash-nav-btn" onclick="showMeineWoerter()">📚 Meine Wörter</button>
+        <button class="dash-nav-btn dash-nav-fc" onclick="startFlashcardFromDue()">🃏 Karteikarten</button>
+      </div>
+
       <!-- "Heute wiederholen" Bereich -->
       <div id="review-section" class="review-section hidden">
         <div class="review-section-left">
@@ -269,6 +275,12 @@ window.addEventListener("DOMContentLoaded", function () {
 
       <div id="lesson-detail" class="lesson-detail-view hidden"></div>
       <div id="review-view"   class="lesson-detail-view hidden"></div>
+
+      <!-- Meine Wörter View -->
+      <div id="meine-woerter-view" class="hidden"></div>
+
+      <!-- Karteikarten View -->
+      <div id="flashcard-view" class="hidden"></div>
     </div>
 
   </div>
