@@ -1,0 +1,13 @@
+{
+  "name": "sprachen-audio-generator",
+  "version": "1.0.0",
+  "description": "Generiert türkische Audio-Dateien via Google Cloud TTS",
+  "main": "generate.js",
+  "scripts": {
+    "generate": "node generate.js",
+    "update-app": "node update-app-js.js"
+  },
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^5.0.0"
+  }
+}
