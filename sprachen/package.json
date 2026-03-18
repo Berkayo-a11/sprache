@@ -1,0 +1,10 @@
+{
+  "name": "sprachen-audio-generator",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "node generate-audio.js"
+  },
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^5.0.0"
+  }
+}
