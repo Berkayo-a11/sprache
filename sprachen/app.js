@@ -414,6 +414,586 @@ const LESSON_CONTENT = {
     ],
     anwendung: 'Führe diesen Dialog mit dir selbst vor dem Spiegel. 3 Mal. Ohne Text.',
     zusammenfassung: 'Du kannst dich vorstellen, begrüßen und nach Name, Herkunft und Alter fragen. Echter Türkisch-Alltag!'
+  },
+
+  'Zahlen 11–100': {
+    lernziel: 'Du kannst Zahlen bis 100 bilden, verstehen und beim Einkaufen nutzen.',
+    woerter: [
+      { tr: 'on bir',   de: 'elf (11)',         extra: 'on + bir',    audio: '' },
+      { tr: 'on beş',   de: 'fünfzehn (15)',    extra: 'on + beş',   audio: '' },
+      { tr: 'yirmi',    de: 'zwanzig (20)',      extra: '',            audio: '' },
+      { tr: 'otuz',     de: 'dreißig (30)',      extra: '',            audio: '' },
+      { tr: 'kırk',     de: 'vierzig (40)',      extra: '',            audio: '' },
+      { tr: 'elli',     de: 'fünfzig (50)',      extra: '',            audio: '' },
+      { tr: 'altmış',   de: 'sechzig (60)',      extra: '',            audio: '' },
+      { tr: 'yetmiş',   de: 'siebzig (70)',      extra: '',            audio: '' },
+      { tr: 'seksen',   de: 'achtzig (80)',      extra: '',            audio: '' },
+      { tr: 'doksan',   de: 'neunzig (90)',      extra: '',            audio: '' },
+      { tr: 'yüz',      de: 'hundert (100)',     extra: '',            audio: '' },
+    ],
+    erklaerung: '11–19: "on" + Zahl → on bir (11), on iki (12), on dokuz (19). 21: "yirmi bir", 35: "otuz beş". Einfach die Zehner + Einer zusammensetzen!',
+    saatzbausteine: [
+      'Yirmi + bir = yirmi bir (21)',
+      'Otuz + beş = otuz beş (35)',
+      'Elli + dokuz = elli dokuz (59)',
+    ],
+    beispiele: [
+      { tr: 'On beş lira.',       de: '15 Lira.',                audio: '' },
+      { tr: 'Yirmi üç yaşındayım.', de: 'Ich bin 23.',           audio: '' },
+      { tr: 'Otuz iki kişi.',     de: '32 Personen.',            audio: '' },
+      { tr: 'Seksen lira.',       de: '80 Lira.',                audio: '' },
+    ],
+    nachsprech: ['yirmi', 'otuz', 'kırk', 'elli', 'altmış', 'yetmiş', 'seksen', 'doksan', 'yüz'],
+    hoerUebung: 'Höre eine Zahl — schreibe sie auf.',
+    miniDialog: [
+      { sprecher: 'Verkäufer', tr: 'Kaç para?', de: 'Wie viel?' },
+      { sprecher: 'Kunde', tr: 'Yirmi beş lira mı?', de: '25 Lira?' },
+      { sprecher: 'Verkäufer', tr: 'Evet, yirmi beş lira.', de: 'Ja, 25 Lira.' },
+    ],
+    anwendung: 'Zähle von 10 bis 100 in Zehnerschritten laut auf Türkisch.',
+    zusammenfassung: 'Zahlen bis 100 = Zehner + Einer. Kırk elli altmış yetmiş seksen doksan yüz — lern die Zehner, den Rest kannst du ableiten!'
+  },
+
+  'Familienmitglieder': {
+    lernziel: 'Du kannst deine Familie vorstellen und nach Familienmitgliedern fragen.',
+    woerter: [
+      { tr: 'anne',         de: 'Mutter',              extra: 'annem = meine Mutter',   audio: '' },
+      { tr: 'baba',         de: 'Vater',               extra: 'babam = mein Vater',     audio: '' },
+      { tr: 'abla',         de: 'ältere Schwester',    extra: 'ablam',                  audio: '' },
+      { tr: 'abi',          de: 'älterer Bruder',      extra: 'abim',                   audio: '' },
+      { tr: 'kız kardeş',   de: 'jüngere Schwester',   extra: '',                       audio: '' },
+      { tr: 'erkek kardeş', de: 'jüngerer Bruder',     extra: '',                       audio: '' },
+      { tr: 'anneanne',     de: 'Oma (mütterlich)',    extra: '',                       audio: '' },
+      { tr: 'babaanne',     de: 'Oma (väterlich)',     extra: '',                       audio: '' },
+      { tr: 'dede',         de: 'Opa',                 extra: '',                       audio: '' },
+      { tr: 'kardeş',       de: 'Geschwister',         extra: 'allgemein',              audio: '' },
+      { tr: 'çocuk',        de: 'Kind',                extra: '',                       audio: '' },
+    ],
+    erklaerung: 'Im Türkischen unterscheidet man ob das Geschwister älter oder jünger ist! "Abla" = ältere Schwester, "abi" = älterer Bruder. Besitzendung: anne → annem (meine Mutter), baba → babam (mein Vater).',
+    saatzbausteine: [
+      'Benim [Familienmitglied]im var. → Ich habe einen/eine ...',
+      'O benim [Familienmitglied]im. → Das ist mein/e ...',
+      'Kaç kardeşin var? → Wie viele Geschwister hast du?',
+    ],
+    beispiele: [
+      { tr: 'Annem ve babam İstanbul\'da.', de: 'Meine Mutter und mein Vater sind in Istanbul.', audio: '' },
+      { tr: 'Bir ablam var.',              de: 'Ich habe eine ältere Schwester.',               audio: '' },
+      { tr: 'Kaç kardeşin var?',           de: 'Wie viele Geschwister hast du?',                audio: '' },
+      { tr: 'İki kardeşim var.',           de: 'Ich habe zwei Geschwister.',                    audio: '' },
+    ],
+    nachsprech: ['anne', 'baba', 'abla', 'abi', 'kardeş', 'dede', 'anneanne'],
+    hoerUebung: 'Höre eine Familienbeschreibung — wie viele Familienmitglieder?',
+    miniDialog: [
+      { sprecher: 'A', tr: 'Kaç kardeşin var?', de: 'Wie viele Geschwister hast du?' },
+      { sprecher: 'B', tr: 'İki kardeşim var. Bir ablam, bir erkek kardeşim.', de: 'Zwei. Eine ältere Schwester und ein jüngerer Bruder.' },
+      { sprecher: 'A', tr: 'Annen ve baban nerede?', de: 'Wo sind deine Eltern?' },
+      { sprecher: 'B', tr: 'Ankara\'da.', de: 'In Ankara.' },
+    ],
+    anwendung: 'Beschreibe deine Familie laut auf Türkisch. Wer ist wer?',
+    zusammenfassung: 'Anne, baba, abla, abi, kardeş — die 5 wichtigsten Familienwörter. Besitzendung -m/im/ım dranhängen!'
+  },
+
+  'Farben lernen': {
+    lernziel: 'Du kannst alle Grundfarben auf Türkisch nennen und beschreiben.',
+    woerter: [
+      { tr: 'kırmızı',     de: 'rot',            extra: '',  audio: '' },
+      { tr: 'mavi',        de: 'blau',           extra: '',  audio: '' },
+      { tr: 'yeşil',       de: 'grün',           extra: '',  audio: '' },
+      { tr: 'sarı',        de: 'gelb',           extra: '',  audio: '' },
+      { tr: 'beyaz',       de: 'weiß',           extra: '',  audio: '' },
+      { tr: 'siyah',       de: 'schwarz',        extra: '',  audio: '' },
+      { tr: 'turuncu',     de: 'orange',         extra: '',  audio: '' },
+      { tr: 'mor',         de: 'lila / violett', extra: '',  audio: '' },
+      { tr: 'pembe',       de: 'rosa',           extra: '',  audio: '' },
+      { tr: 'kahverengi',  de: 'braun',          extra: 'kahve = Kaffee!', audio: '' },
+      { tr: 'gri',         de: 'grau',           extra: '',  audio: '' },
+    ],
+    erklaerung: 'Adjektive kommen im Türkischen VOR das Nomen: "kırmızı araba" = das rote Auto. Sie verändern sich nicht nach Geschlecht (es gibt keins!).',
+    saatzbausteine: [
+      '[Farbe] + [Nomen] → kırmızı araba (rotes Auto)',
+      'Bu [Farbe]. → Das ist [Farbe].',
+      'Rengi ne? → Welche Farbe hat es?',
+    ],
+    beispiele: [
+      { tr: 'Kırmızı araba.',   de: 'Das rote Auto.',         audio: '' },
+      { tr: 'Mavi gökyüzü.',    de: 'Der blaue Himmel.',      audio: '' },
+      { tr: 'Rengi ne?',        de: 'Welche Farbe hat es?',   audio: '' },
+      { tr: 'Siyah ve beyaz.', de: 'Schwarz und weiß.',      audio: '' },
+    ],
+    nachsprech: ['kırmızı', 'mavi', 'yeşil', 'sarı', 'beyaz', 'siyah', 'turuncu', 'mor', 'pembe'],
+    hoerUebung: 'Höre eine Farbe — welche ist es?',
+    miniDialog: [
+      { sprecher: 'A', tr: 'Bu çanta hangi renk?', de: 'Welche Farbe hat diese Tasche?' },
+      { sprecher: 'B', tr: 'Kırmızı.', de: 'Rot.' },
+      { sprecher: 'A', tr: 'Mavi yok mu?', de: 'Gibt es kein Blau?' },
+      { sprecher: 'B', tr: 'Var, işte!', de: 'Doch, hier!' },
+    ],
+    anwendung: 'Schau dich um — benenne 10 Dinge nach ihrer Farbe auf Türkisch.',
+    zusammenfassung: 'Adjektive kommen vor das Nomen, ändern sich nicht. Kırmızı mavi yeşil sarı beyaz siyah — lern die 6 Grundfarben zuerst!'
+  },
+
+  'Kleidung benennen': {
+    lernziel: 'Du kannst Kleidungsstücke benennen und beim Einkaufen beschreiben.',
+    woerter: [
+      { tr: 'tişört',    de: 'T-Shirt',        extra: '',  audio: '' },
+      { tr: 'gömlek',    de: 'Hemd / Bluse',   extra: '',  audio: '' },
+      { tr: 'pantolon',  de: 'Hose',           extra: '',  audio: '' },
+      { tr: 'etek',      de: 'Rock',           extra: '',  audio: '' },
+      { tr: 'elbise',    de: 'Kleid',          extra: '',  audio: '' },
+      { tr: 'ceket',     de: 'Jacke',          extra: '',  audio: '' },
+      { tr: 'ayakkabı',  de: 'Schuhe',         extra: '',  audio: '' },
+      { tr: 'çanta',     de: 'Tasche',         extra: '',  audio: '' },
+      { tr: 'büyük',     de: 'groß',           extra: '',  audio: '' },
+      { tr: 'küçük',     de: 'klein',          extra: '',  audio: '' },
+    ],
+    erklaerung: 'Farbe + Kleidung = fertige Beschreibung: "mavi gömlek" (blaues Hemd). Größen auf Türkisch: küçük (S), orta (M), büyük (L).',
+    saatzbausteine: [
+      '[Farbe] + [Kleidung] → sarı elbise (gelbes Kleid)',
+      'Bu [Kleidung] kaç para? → Was kostet dieses/r ...?',
+      'Deneyebilir miyim? → Kann ich es anprobieren?',
+    ],
+    beispiele: [
+      { tr: 'Mavi pantolon lütfen.',    de: 'Eine blaue Hose bitte.',       audio: '' },
+      { tr: 'Bu kaç para?',             de: 'Was kostet das?',              audio: '' },
+      { tr: 'Büyük beden var mı?',      de: 'Haben Sie Größe L?',           audio: '' },
+      { tr: 'Deneyebilir miyim?',       de: 'Kann ich es anprobieren?',     audio: '' },
+    ],
+    nachsprech: ['tişört', 'gömlek', 'pantolon', 'elbise', 'ceket', 'ayakkabı', 'çanta'],
+    hoerUebung: 'Höre eine Beschreibung — welches Kleidungsstück in welcher Farbe?',
+    miniDialog: [
+      { sprecher: 'Kunde', tr: 'Bu gömlek kaç para?', de: 'Was kostet dieses Hemd?' },
+      { sprecher: 'Verkäufer', tr: 'Yüz elli lira.', de: '150 Lira.' },
+      { sprecher: 'Kunde', tr: 'Mavi renkte var mı?', de: 'Haben Sie es in Blau?' },
+      { sprecher: 'Verkäufer', tr: 'Evet, buyurun.', de: 'Ja, bitte sehr.' },
+    ],
+    anwendung: 'Beschreibe was du gerade trägst auf Türkisch — Farbe + Kleidungsstück.',
+    zusammenfassung: 'Farbe + Kleidung = fertige Beschreibung. Bu kaç para? und Deneyebilir miyim? sind deine wichtigsten Einkaufssätze!'
+  },
+
+  'Die Uhrzeit': {
+    lernziel: 'Du kannst die Uhrzeit auf Türkisch sagen und verstehen.',
+    woerter: [
+      { tr: 'Saat kaç?',   de: 'Wie spät ist es?',    extra: '',                     audio: '' },
+      { tr: 'Saat bir.',   de: 'Es ist ein Uhr.',      extra: '',                     audio: '' },
+      { tr: 'buçuk',       de: 'halb',                 extra: 'iki buçuk = halb drei', audio: '' },
+      { tr: 'çeyrek geçe', de: 'Viertel nach',         extra: 'ikiyi çeyrek geçe',    audio: '' },
+      { tr: 'çeyrek var',  de: 'Viertel vor',          extra: 'üçe çeyrek var',       audio: '' },
+      { tr: 'sabah',       de: 'morgens',              extra: '',                     audio: '' },
+      { tr: 'öğleden sonra', de: 'nachmittags',        extra: '',                     audio: '' },
+      { tr: 'akşam',       de: 'abends',               extra: '',                     audio: '' },
+      { tr: 'gece',        de: 'nachts',               extra: '',                     audio: '' },
+    ],
+    erklaerung: 'Volle Stunde: "Saat üç." (Es ist drei Uhr). Halb: "Saat üç buçuk." (Halb vier). Für "nach" wird der Akkusativ genutzt: "İkiyi beş geçiyor." (5 nach zwei).',
+    saatzbausteine: [
+      'Saat kaç? → Wie spät ist es?',
+      'Saat [Zahl]. → Es ist [Zahl] Uhr.',
+      'Saat [Zahl] buçuk. → Halb [Zahl+1].',
+      'Saat kaçta? → Um wie viel Uhr?',
+    ],
+    beispiele: [
+      { tr: 'Saat kaç?',          de: 'Wie spät ist es?',         audio: '' },
+      { tr: 'Saat dört.',         de: 'Es ist vier Uhr.',         audio: '' },
+      { tr: 'Saat yedi buçuk.',   de: 'Es ist halb acht.',        audio: '' },
+      { tr: 'Saat kaçta buluşalım?', de: 'Um wie viel Uhr treffen wir uns?', audio: '' },
+    ],
+    nachsprech: ['Saat kaç?', 'Saat bir.', 'Saat iki buçuk.', 'sabah', 'akşam', 'gece'],
+    hoerUebung: 'Höre eine Uhrzeit — schreibe sie auf.',
+    miniDialog: [
+      { sprecher: 'A', tr: 'Saat kaç?', de: 'Wie spät ist es?' },
+      { sprecher: 'B', tr: 'Saat on bir.', de: 'Es ist elf Uhr.' },
+      { sprecher: 'A', tr: 'Saat kaçta buluşuyoruz?', de: 'Um wie viel Uhr treffen wir uns?' },
+      { sprecher: 'B', tr: 'Saat ikide.', de: 'Um zwei Uhr.' },
+    ],
+    anwendung: 'Schau auf die Uhr — sag die Uhrzeit auf Türkisch. Übe jede Stunde einmal.',
+    zusammenfassung: 'Saat kaç? = Wie spät ist es? Saat + Zahl = fertig. Buçuk = halb. Das reicht für den Alltag!'
+  },
+
+  'Datum & Wochentage': {
+    lernziel: 'Du kannst Wochentage und das Datum nennen und nach dem Datum fragen.',
+    woerter: [
+      { tr: 'Pazartesi',  de: 'Montag',       extra: '',             audio: '' },
+      { tr: 'Salı',       de: 'Dienstag',     extra: '',             audio: '' },
+      { tr: 'Çarşamba',   de: 'Mittwoch',     extra: '',             audio: '' },
+      { tr: 'Perşembe',   de: 'Donnerstag',   extra: '',             audio: '' },
+      { tr: 'Cuma',       de: 'Freitag',      extra: 'heiliger Tag', audio: '' },
+      { tr: 'Cumartesi',  de: 'Samstag',      extra: '',             audio: '' },
+      { tr: 'Pazar',      de: 'Sonntag',      extra: '',             audio: '' },
+      { tr: 'bugün',      de: 'heute',        extra: '',             audio: '' },
+      { tr: 'yarın',      de: 'morgen',       extra: '',             audio: '' },
+      { tr: 'dün',        de: 'gestern',      extra: '',             audio: '' },
+      { tr: 'hafta',      de: 'Woche',        extra: '',             audio: '' },
+    ],
+    erklaerung: '"Bugün ne günü?" = Was ist heute für ein Tag? "Bugün Pazartesi." = Heute ist Montag. Der Wochenbeginn ist in der Türkei der Montag — wie in Deutschland.',
+    saatzbausteine: [
+      'Bugün ne günü? → Was ist heute für ein Tag?',
+      'Bugün [Wochentag]. → Heute ist [Tag].',
+      'Yarın [Wochentag]. → Morgen ist [Tag].',
+    ],
+    beispiele: [
+      { tr: 'Bugün Çarşamba.',       de: 'Heute ist Mittwoch.',         audio: '' },
+      { tr: 'Yarın Perşembe.',       de: 'Morgen ist Donnerstag.',      audio: '' },
+      { tr: 'Dün Pazartesiydi.',     de: 'Gestern war Montag.',         audio: '' },
+      { tr: 'Bu hafta sonu ne yapıyorsun?', de: 'Was machst du dieses Wochenende?', audio: '' },
+    ],
+    nachsprech: ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi', 'Pazar'],
+    hoerUebung: 'Höre einen Tag — welcher Wochentag ist es?',
+    miniDialog: [
+      { sprecher: 'A', tr: 'Bugün ne günü?', de: 'Was ist heute für ein Tag?' },
+      { sprecher: 'B', tr: 'Bugün Cuma.', de: 'Heute ist Freitag.' },
+      { sprecher: 'A', tr: 'Yarın ne?', de: 'Was ist morgen?' },
+      { sprecher: 'B', tr: 'Yarın Cumartesi. Hafta sonu!', de: 'Morgen Samstag. Wochenende!' },
+    ],
+    anwendung: 'Sag heute laut welcher Tag es ist — und was du morgen machst.',
+    zusammenfassung: '7 Wochentage gelernt. Bugün / yarın / dün — drei wichtige Zeitwörter. Cuma = Freitag ist besonders wichtig in der Türkei!'
+  },
+
+  'Monate & Jahreszeiten': {
+    lernziel: 'Du kennst alle 12 Monate und 4 Jahreszeiten auf Türkisch.',
+    woerter: [
+      { tr: 'Ocak',      de: 'Januar',     extra: '',  audio: '' },
+      { tr: 'Şubat',     de: 'Februar',    extra: '',  audio: '' },
+      { tr: 'Mart',      de: 'März',       extra: '',  audio: '' },
+      { tr: 'Nisan',     de: 'April',      extra: '',  audio: '' },
+      { tr: 'Mayıs',     de: 'Mai',        extra: '',  audio: '' },
+      { tr: 'Haziran',   de: 'Juni',       extra: '',  audio: '' },
+      { tr: 'Temmuz',    de: 'Juli',       extra: 'heiß!', audio: '' },
+      { tr: 'Ağustos',   de: 'August',     extra: '',  audio: '' },
+      { tr: 'Eylül',     de: 'September',  extra: '',  audio: '' },
+      { tr: 'Ekim',      de: 'Oktober',    extra: '',  audio: '' },
+      { tr: 'Kasım',     de: 'November',   extra: '',  audio: '' },
+      { tr: 'Aralık',    de: 'Dezember',   extra: '',  audio: '' },
+    ],
+    erklaerung: 'Jahreszeiten: ilkbahar (Frühling), yaz (Sommer), sonbahar (Herbst), kış (Winter). "Hangi ayda doğdun?" = In welchem Monat bist du geboren?',
+    saatzbausteine: [
+      'Hangi ayda doğdun? → In welchem Monat bist du geboren?',
+      '[Monat]\'da doğdum. → Ich bin im [Monat] geboren.',
+      'Şu an hangi mevsim? → Welche Jahreszeit ist gerade?',
+    ],
+    beispiele: [
+      { tr: 'Temmuz\'da doğdum.',    de: 'Ich bin im Juli geboren.',       audio: '' },
+      { tr: 'Ocak\'ta çok soğuk.',  de: 'Im Januar ist es sehr kalt.',    audio: '' },
+      { tr: 'Yaz tatili Haziran\'da başlar.', de: 'Die Sommerferien beginnen im Juni.', audio: '' },
+    ],
+    nachsprech: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'],
+    hoerUebung: 'Höre einen Monat — welcher ist es?',
+    miniDialog: [
+      { sprecher: 'A', tr: 'Hangi ayda doğdun?', de: 'In welchem Monat bist du geboren?' },
+      { sprecher: 'B', tr: 'Nisan\'da. Sen?', de: 'Im April. Und du?' },
+      { sprecher: 'A', tr: 'Ben Aralık\'ta.', de: 'Ich im Dezember.' },
+      { sprecher: 'B', tr: 'Kış çocuğusun!', de: 'Du bist ein Winterkind!' },
+    ],
+    anwendung: 'Sag deinen Geburtstagsmonat auf Türkisch. Dann nenne alle 12 Monate auswendig.',
+    zusammenfassung: '12 Monate + 4 Jahreszeiten. "Tda/te" = im Monat. Ocak bis Aralık — das reicht!'
+  },
+
+  'Lebensmittel & Zutaten': {
+    lernziel: 'Du kannst Lebensmittel benennen, einkaufen und nach Zutaten fragen.',
+    woerter: [
+      { tr: 'ekmek',    de: 'Brot',        extra: '',            audio: '' },
+      { tr: 'süt',      de: 'Milch',       extra: '',            audio: '' },
+      { tr: 'peynir',   de: 'Käse',        extra: '',            audio: '' },
+      { tr: 'yumurta',  de: 'Ei',          extra: '',            audio: '' },
+      { tr: 'et',       de: 'Fleisch',     extra: '',            audio: '' },
+      { tr: 'tavuk',    de: 'Hühnchen',    extra: '',            audio: '' },
+      { tr: 'balık',    de: 'Fisch',       extra: '',            audio: '' },
+      { tr: 'domates',  de: 'Tomate',      extra: '',            audio: '' },
+      { tr: 'elma',     de: 'Apfel',       extra: '',            audio: '' },
+      { tr: 'pilav',    de: 'Reis',        extra: 'Grundnahrung', audio: '' },
+      { tr: 'ekmek',    de: 'Brot',        extra: '',            audio: '' },
+      { tr: 'şeker',    de: 'Zucker',      extra: '',            audio: '' },
+    ],
+    erklaerung: 'Im türkischen Markt fragt man "... var mı?" (Gibt es ...?) oder "... istiyorum." (Ich möchte ...). Mengen: "bir kilo" (ein Kilo), "yarım kilo" (ein halbes Kilo), "bir paket" (ein Paket).',
+    saatzbausteine: [
+      'Bir kilo [Lebensmittel] lütfen. → Ein Kilo ... bitte.',
+      'Yarım kilo → ein halbes Kilo',
+      '[Lebensmittel] var mı? → Haben Sie ...?',
+    ],
+    beispiele: [
+      { tr: 'Bir kilo domates lütfen.',    de: 'Ein Kilo Tomaten bitte.',     audio: '' },
+      { tr: 'Peynir var mı?',             de: 'Haben Sie Käse?',             audio: '' },
+      { tr: 'Yarım kilo et lütfen.',       de: 'Ein halbes Kilo Fleisch bitte.', audio: '' },
+      { tr: 'Ne kadar?',                  de: 'Wie viel kostet das?',        audio: '' },
+    ],
+    nachsprech: ['ekmek', 'süt', 'peynir', 'yumurta', 'et', 'tavuk', 'domates', 'elma'],
+    hoerUebung: 'Höre eine Einkaufsliste — was wird gekauft?',
+    miniDialog: [
+      { sprecher: 'Kunde', tr: 'Merhaba! Bir kilo domates var mı?', de: 'Hallo! Haben Sie ein Kilo Tomaten?' },
+      { sprecher: 'Verkäufer', tr: 'Var, tabii. Başka?', de: 'Ja, natürlich. Sonst noch was?' },
+      { sprecher: 'Kunde', tr: 'Yarım kilo peynir de lütfen.', de: 'Und ein halbes Kilo Käse bitte.' },
+      { sprecher: 'Verkäufer', tr: 'Tamam, otuz lira.', de: 'Alles klar, 30 Lira.' },
+    ],
+    anwendung: 'Schreib eine kurze Einkaufsliste auf Türkisch — 5 Lebensmittel die du diese Woche brauchst.',
+    zusammenfassung: 'Ekmek süt peynir yumurta et tavuk balık — die 7 Basis-Lebensmittel. Bir kilo + Lütfen = du kannst einkaufen!'
+  },
+
+  'Essen bestellen': {
+    lernziel: 'Du kannst im Restaurant ein vollständiges Essen bestellen.',
+    woerter: [
+      { tr: 'menü',        de: 'Speisekarte',    extra: '',  audio: '' },
+      { tr: 'çorba',       de: 'Suppe',          extra: '',  audio: '' },
+      { tr: 'salata',      de: 'Salat',          extra: '',  audio: '' },
+      { tr: 'kebap',       de: 'Kebab',          extra: '',  audio: '' },
+      { tr: 'pilav',       de: 'Reis',           extra: '',  audio: '' },
+      { tr: 'tatlı',       de: 'Dessert / süß',  extra: '',  audio: '' },
+      { tr: 'Ne istersiniz?', de: 'Was möchten Sie?', extra: 'der Kellner fragt', audio: '' },
+      { tr: 'afiyet olsun', de: 'Guten Appetit', extra: '',  audio: '' },
+    ],
+    erklaerung: '"Menü var mı?" = Haben Sie eine Speisekarte? "Ne tavsiye edersiniz?" = Was empfehlen Sie? "Hesap lütfen." = Die Rechnung bitte.',
+    saatzbausteine: [
+      'Bir [Gericht] lütfen. → Ein/e ... bitte.',
+      'Ne tavsiye edersiniz? → Was empfehlen Sie?',
+      'Hesap lütfen. → Die Rechnung bitte.',
+      'Afiyet olsun! → Guten Appetit!',
+    ],
+    beispiele: [
+      { tr: 'Bir çorba lütfen.',         de: 'Eine Suppe bitte.',              audio: '' },
+      { tr: 'Ne tavsiye edersiniz?',     de: 'Was empfehlen Sie?',             audio: '' },
+      { tr: 'Kebap ve salata lütfen.',   de: 'Kebab und Salat bitte.',         audio: '' },
+      { tr: 'Afiyet olsun!',             de: 'Guten Appetit!',                 audio: '' },
+    ],
+    nachsprech: ['menü', 'çorba', 'salata', 'kebap', 'tatlı', 'Afiyet olsun!', 'Ne tavsiye edersiniz?'],
+    hoerUebung: 'Höre eine Bestellung — was wird bestellt?',
+    miniDialog: [
+      { sprecher: 'Kellner', tr: 'İyi akşamlar! Ne istersiniz?', de: 'Guten Abend! Was möchten Sie?' },
+      { sprecher: 'Gast', tr: 'Menü var mı?', de: 'Haben Sie eine Speisekarte?' },
+      { sprecher: 'Kellner', tr: 'Buyurun.', de: 'Bitte sehr.' },
+      { sprecher: 'Gast', tr: 'Bir çorba, bir kebap lütfen.', de: 'Eine Suppe, einen Kebab bitte.' },
+      { sprecher: 'Kellner', tr: 'Afiyet olsun!', de: 'Guten Appetit!' },
+    ],
+    anwendung: 'Bestelle dein Lieblingsessen gedanklich auf Türkisch. Laut sprechen!',
+    zusammenfassung: 'Çorba salata kebap pilav tatlı — die wichtigsten Gerichte. Ne istersiniz? und Hesap lütfen — mehr brauchst du nicht!'
+  },
+
+  'Wetter beschreiben': {
+    lernziel: 'Du kannst das Wetter beschreiben und nach dem Wetter fragen.',
+    woerter: [
+      { tr: 'Hava nasıl?',  de: 'Wie ist das Wetter?',  extra: '',           audio: '' },
+      { tr: 'güneşli',      de: 'sonnig',               extra: '',           audio: '' },
+      { tr: 'yağmurlu',     de: 'regnerisch',           extra: '',           audio: '' },
+      { tr: 'bulutlu',      de: 'bewölkt',              extra: '',           audio: '' },
+      { tr: 'karlı',        de: 'schneeig',             extra: '',           audio: '' },
+      { tr: 'sıcak',        de: 'heiß / warm',          extra: '',           audio: '' },
+      { tr: 'soğuk',        de: 'kalt',                 extra: '',           audio: '' },
+      { tr: 'rüzgarlı',     de: 'windig',               extra: '',           audio: '' },
+      { tr: 'hava',         de: 'Wetter / Luft',        extra: '',           audio: '' },
+      { tr: 'derece',       de: 'Grad',                 extra: 'yirmi derece = 20°', audio: '' },
+    ],
+    erklaerung: '"Hava güneşli." = Es ist sonnig. "Hava çok sıcak." = Es ist sehr heiß. Temperatur: "Hava kaç derece?" (Wie viel Grad?) — "Yirmi beş derece." (25 Grad).',
+    saatzbausteine: [
+      'Hava nasıl? → Wie ist das Wetter?',
+      'Hava [Wetter]. → Es ist [Wetter].',
+      'Hava kaç derece? → Wie viel Grad?',
+    ],
+    beispiele: [
+      { tr: 'Hava nasıl?',          de: 'Wie ist das Wetter?',         audio: '' },
+      { tr: 'Hava güneşli ve sıcak.', de: 'Es ist sonnig und warm.',  audio: '' },
+      { tr: 'Hava çok soğuk!',      de: 'Es ist sehr kalt!',          audio: '' },
+      { tr: 'Bugün yağmur var.',    de: 'Heute regnet es.',           audio: '' },
+    ],
+    nachsprech: ['Hava nasıl?', 'güneşli', 'yağmurlu', 'bulutlu', 'sıcak', 'soğuk', 'karlı'],
+    hoerUebung: 'Höre eine Wettervorhersage — was wird beschrieben?',
+    miniDialog: [
+      { sprecher: 'A', tr: 'Hava nasıl bugün?', de: 'Wie ist das Wetter heute?' },
+      { sprecher: 'B', tr: 'Çok güneşli ve sıcak!', de: 'Sehr sonnig und heiß!' },
+      { sprecher: 'A', tr: 'Kaç derece?', de: 'Wie viel Grad?' },
+      { sprecher: 'B', tr: 'Otuz iki derece.', de: '32 Grad.' },
+    ],
+    anwendung: 'Beschreibe das Wetter gerade draußen auf Türkisch. Dann morgens und abends wiederholen.',
+    zusammenfassung: 'Hava nasıl? + güneşli/yağmurlu/sıcak/soğuk = du kannst über Wetter reden. Super für Smalltalk!'
+  },
+
+  'Körper & Beschwerden': {
+    lernziel: 'Du kannst Körperteile benennen und sagen wenn etwas wehtut.',
+    woerter: [
+      { tr: 'baş',      de: 'Kopf',      extra: 'başım ağrıyor = Kopfweh',   audio: '' },
+      { tr: 'göz',      de: 'Auge',      extra: '',                          audio: '' },
+      { tr: 'kulak',    de: 'Ohr',       extra: '',                          audio: '' },
+      { tr: 'burun',    de: 'Nase',      extra: '',                          audio: '' },
+      { tr: 'ağız',     de: 'Mund',      extra: '',                          audio: '' },
+      { tr: 'diş',      de: 'Zahn',      extra: 'dişim ağrıyor = Zahnweh',  audio: '' },
+      { tr: 'boyun',    de: 'Hals / Nacken', extra: '',                     audio: '' },
+      { tr: 'el',       de: 'Hand',      extra: '',                          audio: '' },
+      { tr: 'kol',      de: 'Arm',       extra: '',                          audio: '' },
+      { tr: 'ayak',     de: 'Fuß',       extra: '',                          audio: '' },
+      { tr: 'karın',    de: 'Bauch',     extra: 'karın ağrısı = Bauchschmerzen', audio: '' },
+    ],
+    erklaerung: '"Başım ağrıyor." = Mein Kopf tut weh. Formel: [Körperteil] + ım/im/um/üm + ağrıyor. "Hastayım." = Ich bin krank. "Doktora gitmem lazım." = Ich muss zum Arzt.',
+    saatzbausteine: [
+      '[Körperteil]ım ağrıyor. → Mein ... tut weh.',
+      'Hastayım. → Ich bin krank.',
+      'Doktora gitmem lazım. → Ich muss zum Arzt.',
+    ],
+    beispiele: [
+      { tr: 'Başım ağrıyor.',         de: 'Mein Kopf tut weh.',           audio: '' },
+      { tr: 'Dişim çok ağrıyor.',     de: 'Mein Zahn tut sehr weh.',      audio: '' },
+      { tr: 'Hastayım.',              de: 'Ich bin krank.',               audio: '' },
+      { tr: 'Ateşim var.',            de: 'Ich habe Fieber.',             audio: '' },
+    ],
+    nachsprech: ['baş', 'göz', 'kulak', 'diş', 'el', 'kol', 'ayak', 'Başım ağrıyor.', 'Hastayım.'],
+    hoerUebung: 'Höre eine Beschwerde — welcher Körperteil tut weh?',
+    miniDialog: [
+      { sprecher: 'Arzt', tr: 'Neyiniz var?', de: 'Was fehlt Ihnen?' },
+      { sprecher: 'Patient', tr: 'Başım çok ağrıyor.', de: 'Mein Kopf tut sehr weh.' },
+      { sprecher: 'Arzt', tr: 'Ateşiniz var mı?', de: 'Haben Sie Fieber?' },
+      { sprecher: 'Patient', tr: 'Evet, biraz.', de: 'Ja, ein bisschen.' },
+    ],
+    anwendung: 'Zeig auf deinen Körper und benenne jeden Teil auf Türkisch.',
+    zusammenfassung: 'Baş göz kulak diş el kol ayak — 7 wichtige Körperteile. [Körperteil]ım ağrıyor = ... tut weh. Hastayım = ich bin krank!'
+  },
+
+  'Das Haus & Zimmer': {
+    lernziel: 'Du kannst Zimmer und Möbel benennen und beschreiben wo etwas ist.',
+    woerter: [
+      { tr: 'ev',           de: 'Haus',              extra: '',  audio: '' },
+      { tr: 'oda',          de: 'Zimmer',            extra: '',  audio: '' },
+      { tr: 'mutfak',       de: 'Küche',             extra: '',  audio: '' },
+      { tr: 'banyo',        de: 'Bad',               extra: '',  audio: '' },
+      { tr: 'tuvalet',      de: 'Toilette',          extra: '',  audio: '' },
+      { tr: 'salon',        de: 'Wohnzimmer',        extra: '',  audio: '' },
+      { tr: 'yatak odası',  de: 'Schlafzimmer',      extra: '',  audio: '' },
+      { tr: 'masa',         de: 'Tisch',             extra: '',  audio: '' },
+      { tr: 'sandalye',     de: 'Stuhl',             extra: '',  audio: '' },
+      { tr: 'yatak',        de: 'Bett',              extra: '',  audio: '' },
+      { tr: 'kapı',         de: 'Tür',               extra: '',  audio: '' },
+      { tr: 'pencere',      de: 'Fenster',           extra: '',  audio: '' },
+    ],
+    erklaerung: 'Lageangaben: "masanın üstünde" (auf dem Tisch), "kapının yanında" (neben der Tür). Einfacher: "orada" (dort), "burada" (hier), "içinde" (drinnen).',
+    saatzbausteine: [
+      'Bu [Zimmer]. → Das ist die/das ...',
+      'Tuvalet nerede? → Wo ist die Toilette?',
+      'Orada / Burada. → Dort / Hier.',
+    ],
+    beispiele: [
+      { tr: 'Mutfak nerede?',       de: 'Wo ist die Küche?',       audio: '' },
+      { tr: 'Tuvalet orada.',       de: 'Die Toilette ist dort.',  audio: '' },
+      { tr: 'Evim küçük ama güzel.', de: 'Mein Haus ist klein aber schön.', audio: '' },
+      { tr: 'Kaç odalı?',           de: 'Wie viele Zimmer?',      audio: '' },
+    ],
+    nachsprech: ['ev', 'mutfak', 'banyo', 'salon', 'yatak odası', 'masa', 'yatak', 'kapı'],
+    hoerUebung: 'Höre eine Beschreibung — welches Zimmer wird beschrieben?',
+    miniDialog: [
+      { sprecher: 'Gast', tr: 'Tuvalet nerede?', de: 'Wo ist die Toilette?' },
+      { sprecher: 'Gastgeber', tr: 'Orada, sağda.', de: 'Dort, rechts.' },
+      { sprecher: 'Gast', tr: 'Eviniz çok güzel!', de: 'Ihr Haus ist sehr schön!' },
+      { sprecher: 'Gastgeber', tr: 'Teşekkürler!', de: 'Danke!' },
+    ],
+    anwendung: 'Geh durch deine Wohnung und benenne jedes Zimmer und 3 Möbel pro Zimmer auf Türkisch.',
+    zusammenfassung: 'Mutfak banyo salon yatak odası — die 4 Hauptzimmer. Tuvalet nerede? ist einer der nützlichsten Sätze überhaupt!'
+  },
+
+  'Verben im Präsens': {
+    lernziel: 'Du kannst einfache Sätze mit den häufigsten Verben im Präsens bilden.',
+    woerter: [
+      { tr: 'gitmek',     de: 'gehen',     extra: 'gidiyorum = ich gehe',     audio: '' },
+      { tr: 'gelmek',     de: 'kommen',    extra: 'geliyorum = ich komme',    audio: '' },
+      { tr: 'yemek',      de: 'essen',     extra: 'yiyorum = ich esse',       audio: '' },
+      { tr: 'içmek',      de: 'trinken',   extra: 'içiyorum = ich trinke',    audio: '' },
+      { tr: 'yapmak',     de: 'machen',    extra: 'yapıyorum = ich mache',    audio: '' },
+      { tr: 'konuşmak',   de: 'sprechen',  extra: 'konuşuyorum = ich spreche', audio: '' },
+      { tr: 'anlamak',    de: 'verstehen', extra: 'anlıyorum = ich verstehe', audio: '' },
+      { tr: 'sevmek',     de: 'lieben / mögen', extra: 'seviyorum = ich liebe', audio: '' },
+      { tr: 'oturmak',    de: 'sitzen / wohnen', extra: 'oturuyorum',         audio: '' },
+      { tr: 'çalışmak',   de: 'arbeiten / lernen', extra: 'çalışıyorum',     audio: '' },
+    ],
+    erklaerung: 'Präsens (şimdiki zaman) — was ich gerade tue: Verbstamm + ıyor/iyor/uyor/üyor + Personendung. Ben (ich): -um/im/um/üm. Sen (du): -sun/sin/sun/sün. Klingt kompliziert, lern erstmal die Ich-Form!',
+    saatzbausteine: [
+      'Ben [Verbstamm]ıyorum. → Ich [Verb].',
+      'Ben çay içiyorum. → Ich trinke Tee.',
+      'Ben Türkçe öğreniyorum. → Ich lerne Türkisch.',
+    ],
+    beispiele: [
+      { tr: 'Ben çay içiyorum.',       de: 'Ich trinke Tee.',               audio: '' },
+      { tr: 'Ben Türkçe öğreniyorum.', de: 'Ich lerne Türkisch.',           audio: '' },
+      { tr: 'Nereye gidiyorsun?',      de: 'Wohin gehst du?',              audio: '' },
+      { tr: 'Seni seviyorum.',         de: 'Ich liebe dich.',              audio: '' },
+    ],
+    nachsprech: ['gidiyorum', 'geliyorum', 'yiyorum', 'içiyorum', 'yapıyorum', 'seviyorum'],
+    hoerUebung: 'Höre einen Satz — was macht die Person gerade?',
+    miniDialog: [
+      { sprecher: 'A', tr: 'Ne yapıyorsun?', de: 'Was machst du?' },
+      { sprecher: 'B', tr: 'Türkçe öğreniyorum.', de: 'Ich lerne Türkisch.' },
+      { sprecher: 'A', tr: 'Harika! Ben de öğreniyorum.', de: 'Super! Ich auch.' },
+    ],
+    anwendung: 'Sag 5 Sätze was du gerade tust — auf Türkisch. Ich esse, ich trinke, ich lerne ...',
+    zusammenfassung: '[Verbstamm] + ıyor + um = ich tue gerade etwas. Ben çay içiyorum, ben Türkçe öğreniyorum — diese Formen reichen für den Alltag!'
+  },
+
+  'Verneinung & Fragen': {
+    lernziel: 'Du kannst Sätze verneinen und einfache Fragen stellen.',
+    woerter: [
+      { tr: 'değil',      de: 'nicht / kein',     extra: 'nach Nomen/Adj',     audio: '' },
+      { tr: 'yok',        de: 'es gibt nicht',    extra: 'Gegenpart zu "var"',  audio: '' },
+      { tr: 'hayır',      de: 'nein',             extra: '',                    audio: '' },
+      { tr: 'ne',         de: 'was',              extra: 'ne yapıyorsun?',      audio: '' },
+      { tr: 'nerede',     de: 'wo',               extra: 'nerede?',            audio: '' },
+      { tr: 'ne zaman',   de: 'wann',             extra: 'ne zaman geliyorsun?', audio: '' },
+      { tr: 'neden',      de: 'warum',            extra: 'neden?',             audio: '' },
+      { tr: 'nasıl',      de: 'wie',              extra: 'nasıl?',             audio: '' },
+      { tr: 'kim',        de: 'wer',              extra: 'kim geldi?',         audio: '' },
+      { tr: 'kaç',        de: 'wie viele / viel', extra: 'kaç tane?',          audio: '' },
+    ],
+    erklaerung: 'Verneinung Verb: -mıyor/-miyor/-muyor/-müyor (statt -ıyor). Ich gehe NICHT: "gitmiyorum". Verneinung Nomen: + "değil". "Öğrenci değilim." = Ich bin kein Schüler. Fragen: Fragewort an den Anfang, Verb ans Ende.',
+    saatzbausteine: [
+      '[Verb]miyorum. → Ich [Verb] nicht.',
+      'Ben [Nomen] değilim. → Ich bin kein/e ...',
+      'Nerede [Verb]iyor[sun]? → Wo [Verb]st du?',
+    ],
+    beispiele: [
+      { tr: 'Anlamıyorum.',           de: 'Ich verstehe nicht.',          audio: '' },
+      { tr: 'Türkçe bilmiyorum.',     de: 'Ich spreche kein Türkisch.',   audio: '' },
+      { tr: 'O öğrenci değil.',       de: 'Er/Sie ist kein Schüler.',     audio: '' },
+      { tr: 'Nerede oturuyorsun?',    de: 'Wo wohnst du?',               audio: '' },
+    ],
+    nachsprech: ['değil', 'yok', 'Anlamıyorum.', 'Bilmiyorum.', 'Nerede?', 'Ne zaman?'],
+    hoerUebung: 'Höre einen Satz — positiv oder negativ?',
+    miniDialog: [
+      { sprecher: 'A', tr: 'Türkçe biliyor musun?', de: 'Sprichst du Türkisch?' },
+      { sprecher: 'B', tr: 'Biraz. Çok iyi değil.', de: 'Ein bisschen. Nicht sehr gut.' },
+      { sprecher: 'A', tr: 'Neden öğreniyorsun?', de: 'Warum lernst du es?' },
+      { sprecher: 'B', tr: 'Çünkü Türkiye\'yi seviyorum!', de: 'Weil ich die Türkei liebe!' },
+    ],
+    anwendung: 'Bilde 5 negative Sätze über dich: Was bist du NICHT, was machst du NICHT.',
+    zusammenfassung: '-mıyor = Verneinung Verb. değil = Verneinung Nomen/Adjektiv. Ne nerede kim ne zaman — 4 wichtigste Fragewörter!'
+  },
+
+  'Adjektive & Beschreibungen': {
+    lernziel: 'Du kannst Dinge und Personen mit Adjektiven beschreiben.',
+    woerter: [
+      { tr: 'güzel',     de: 'schön',         extra: '',  audio: '' },
+      { tr: 'çirkin',    de: 'hässlich',       extra: '',  audio: '' },
+      { tr: 'büyük',     de: 'groß',           extra: '',  audio: '' },
+      { tr: 'küçük',     de: 'klein',          extra: '',  audio: '' },
+      { tr: 'uzun',      de: 'lang / groß',    extra: '',  audio: '' },
+      { tr: 'kısa',      de: 'kurz / klein',   extra: '',  audio: '' },
+      { tr: 'yeni',      de: 'neu',            extra: '',  audio: '' },
+      { tr: 'eski',      de: 'alt (nicht jung)', extra: '', audio: '' },
+      { tr: 'iyi',       de: 'gut',            extra: '',  audio: '' },
+      { tr: 'kötü',      de: 'schlecht',       extra: '',  audio: '' },
+      { tr: 'çok',       de: 'sehr / viel',    extra: '',  audio: '' },
+      { tr: 'biraz',     de: 'ein bisschen',   extra: '',  audio: '' },
+    ],
+    erklaerung: 'Adjektive kommen im Türkischen VOR das Nomen und ändern sich NICHT: "güzel kız" (schönes Mädchen), "güzel ev" (schönes Haus). Mit "çok" (sehr): "çok güzel" = sehr schön.',
+    saatzbausteine: [
+      '[Adjektiv] + [Nomen] → büyük ev (großes Haus)',
+      'Bu çok [Adjektiv]! → Das ist sehr ...!',
+      'Çok güzel! → Sehr schön!',
+    ],
+    beispiele: [
+      { tr: 'Bu çok güzel!',      de: 'Das ist sehr schön!',      audio: '' },
+      { tr: 'Büyük bir ev.',      de: 'Ein großes Haus.',         audio: '' },
+      { tr: 'Biraz kötü.',        de: 'Ein bisschen schlecht.',   audio: '' },
+      { tr: 'Çok iyi, teşekkürler.', de: 'Sehr gut, danke.',    audio: '' },
+    ],
+    nachsprech: ['güzel', 'büyük', 'küçük', 'yeni', 'eski', 'iyi', 'kötü', 'çok güzel'],
+    hoerUebung: 'Höre eine Beschreibung — welches Adjektiv wird benutzt?',
+    miniDialog: [
+      { sprecher: 'A', tr: 'Bu film nasıl?', de: 'Wie ist dieser Film?' },
+      { sprecher: 'B', tr: 'Çok güzel! Biraz uzun ama.', de: 'Sehr schön! Aber ein bisschen lang.' },
+      { sprecher: 'A', tr: 'Yeni mi?', de: 'Ist er neu?' },
+      { sprecher: 'B', tr: 'Evet, bu hafta çıktı.', de: 'Ja, er kam diese Woche raus.' },
+    ],
+    anwendung: 'Beschreibe 5 Dinge in deiner Umgebung mit Adjektiven auf Türkisch.',
+    zusammenfassung: 'Adjektiv steht vor dem Nomen, ändert sich nicht. Çok = sehr. Güzel büyük küçük yeni eski iyi kötü — 7 Adjektive für den Start!'
   }
 };
 
@@ -469,25 +1049,18 @@ function audioFor(text) {
 // =============================================
 
 const CATEGORY_VISUAL = {
-  'Aussprache & Alphabet':          { icon: '🔤', color: '#4A90D9' },
-  'Erste Schritte':                 { icon: '👋', color: '#2E8B57' },
-  'Zahlen & Zeit':                  { icon: '🔢', color: '#E67E22' },
-  'Farben & Formen':                { icon: '🎨', color: '#9B59B6' },
-  'Familie & Menschen':             { icon: '👨‍👩‍👧', color: '#E91E63' },
-  'Essen & Trinken':                { icon: '🍽️', color: '#FF5722' },
-  'Einkaufen & Preise':             { icon: '🛍️', color: '#795548' },
-  'Reisen & Verkehr':               { icon: '✈️', color: '#00BCD4' },
-  'Stadt & Orientierung':           { icon: '🗺️', color: '#607D8B' },
-  'Wetter & Jahreszeiten':          { icon: '🌤️', color: '#FFC107' },
-  'Körper & Gesundheit':            { icon: '🏥', color: '#F44336' },
-  'Berufe & Arbeit':                { icon: '💼', color: '#3F51B5' },
-  'Hobbys & Freizeit':              { icon: '🎯', color: '#009688' },
-  'Wohnen & Zuhause':               { icon: '🏠', color: '#8BC34A' },
-  'Natur & Tiere':                  { icon: '🌿', color: '#4CAF50' },
-  'Schule & Lernen':                { icon: '📚', color: '#673AB7' },
-  'Kommunikation & Medien':         { icon: '📱', color: '#2196F3' },
-  'Grammatik & Sätze':              { icon: '📝', color: '#FF9800' },
-  'Kultur & Traditionen':           { icon: '🕌', color: '#C0392B' },
+  'Aussprache & Alphabet':   { icon: '🔤', color: '#4A90D9' },
+  'Erste Schritte':          { icon: '👋', color: '#2E8B57' },
+  'Sich vorstellen':         { icon: '🙋', color: '#16A085' },
+  'Zahlen & Mengen':         { icon: '🔢', color: '#E67E22' },
+  'Farben & Beschreibungen': { icon: '🎨', color: '#9B59B6' },
+  'Familie & Personen':      { icon: '👨‍👩‍👧', color: '#E91E63' },
+  'Essen & Trinken':         { icon: '🍽️', color: '#FF5722' },
+  'Uhrzeit & Kalender':      { icon: '🕐', color: '#795548' },
+  'Mein Zuhause':            { icon: '🏠', color: '#8BC34A' },
+  'Wetter':                  { icon: '🌤️', color: '#FFC107' },
+  'Körper & Gesundheit':     { icon: '🏥', color: '#F44336' },
+  'Grammatik A1':            { icon: '📝', color: '#673AB7' },
 };
 
 // =============================================
@@ -498,110 +1071,54 @@ const CATEGORY_DATA = [
   { title: 'Aussprache & Alphabet', lessons: [
     { title: 'Die türkischen Sonderbuchstaben', progress: 0 },
     { title: 'Vokale & Vokalharmonie', progress: 0 },
-    { title: 'Aussprache-Training', progress: 0 }
+    { title: 'Aussprache-Training', progress: 0 },
   ]},
   { title: 'Erste Schritte', lessons: [
     { title: 'Hallo & Tschüss', progress: 0 },
     { title: 'Bitte & Danke', progress: 0 },
     { title: 'Ja, Nein, Ich verstehe nicht', progress: 0 },
-    { title: 'Wiederholung & Mini-Test', progress: 0 }
   ]},
   { title: 'Sich vorstellen', lessons: [
     { title: 'Mein Name ist...', progress: 0 },
     { title: 'Woher kommst du?', progress: 0 },
     { title: 'Wie alt bist du?', progress: 0 },
     { title: 'Alles zusammen — erstes Gespräch', progress: 0 },
-    { title: 'Mini-Test: Vorstellen', progress: 0 }
   ]},
-  { title: 'Zahlen 1–10', lessons: [
+  { title: 'Zahlen & Mengen', lessons: [
     { title: 'Zahlen 1–10', progress: 0 },
-    { title: 'Zahlen im Alltag', progress: 0 },
-    { title: 'Zahlen-Test', progress: 0 }
-  ]},
-  { title: 'Im Café', lessons: [
-    { title: 'Im Café — Bestellen', progress: 0 },
-    { title: 'Nach dem Preis fragen', progress: 0 },
-    { title: 'Bezahlen', progress: 0 }
-  ]},
-  { title: 'Im Restaurant', lessons: [
-    { title: 'Tisch reservieren', progress: 0 },
-    { title: 'Essen bestellen', progress: 0 },
-    { title: 'Rechnung bitte', progress: 0 }
-  ]},
-  { title: 'Einkaufen & Markt', lessons: [
-    { title: 'Im Supermarkt', progress: 0 },
-    { title: 'Auf dem Markt', progress: 0 },
-    { title: 'In der Bäckerei', progress: 0 },
-    { title: 'Einkaufs-Test', progress: 0 }
-  ]},
-  { title: 'Farben & Kleidung', lessons: [
-    { title: 'Farben lernen', progress: 0 },
-    { title: 'Kleidung benennen', progress: 0 },
-    { title: 'Einkaufen im Bekleidungsgeschäft', progress: 0 },
-    { title: 'Farben- & Kleidungstest', progress: 0 }
-  ]},
-  { title: 'Zahlen 11–1000 & Preise', lessons: [
     { title: 'Zahlen 11–100', progress: 0 },
-    { title: 'Zahlen 100–1000', progress: 0 },
-    { title: 'Preise & Mengen', progress: 0 },
-    { title: 'Zahlen-Preis-Test', progress: 0 }
   ]},
-  { title: 'Uhrzeit & Datum', lessons: [
+  { title: 'Farben & Beschreibungen', lessons: [
+    { title: 'Farben lernen', progress: 0 },
+    { title: 'Adjektive & Beschreibungen', progress: 0 },
+    { title: 'Kleidung benennen', progress: 0 },
+  ]},
+  { title: 'Familie & Personen', lessons: [
+    { title: 'Familienmitglieder', progress: 0 },
+  ]},
+  { title: 'Essen & Trinken', lessons: [
+    { title: 'Im Café — Bestellen', progress: 0 },
+    { title: 'Lebensmittel & Zutaten', progress: 0 },
+    { title: 'Essen bestellen', progress: 0 },
+  ]},
+  { title: 'Uhrzeit & Kalender', lessons: [
     { title: 'Die Uhrzeit', progress: 0 },
     { title: 'Datum & Wochentage', progress: 0 },
     { title: 'Monate & Jahreszeiten', progress: 0 },
-    { title: 'Zeit-Test', progress: 0 }
   ]},
-  { title: 'Unterwegs & Verkehr', lessons: [
-    { title: 'Fragen nach dem Weg', progress: 0 },
-    { title: 'Öffentliche Verkehrsmittel', progress: 0 },
-    { title: 'Taxi nehmen & Fahrpläne', progress: 0 },
-    { title: 'Verkehrs-Test', progress: 0 }
+  { title: 'Mein Zuhause', lessons: [
+    { title: 'Das Haus & Zimmer', progress: 0 },
   ]},
-  { title: 'Wetter & Jahreszeiten', lessons: [
+  { title: 'Wetter', lessons: [
     { title: 'Wetter beschreiben', progress: 0 },
-    { title: 'Jahreszeiten & Kleidung', progress: 0 },
-    { title: 'Smalltalk über das Wetter', progress: 0 },
-    { title: 'Wetter-Test', progress: 0 }
   ]},
-  { title: 'Bei der Familie', lessons: [
-    { title: 'Familienmitglieder', progress: 0 },
-    { title: 'Einfache Gespräche', progress: 0 }
-  ]},
-  { title: 'Essen zu Hause & Kochen', lessons: [
-    { title: 'Lebensmittel & Zutaten', progress: 0 },
-    { title: 'Kochen & Rezepte', progress: 0 },
-    { title: 'Einladung zum Essen', progress: 0 },
-    { title: 'Koch-Test', progress: 0 }
-  ]},
-  { title: 'Freizeit & Hobbys', lessons: [
-    { title: 'Hobbys nennen', progress: 0 },
-    { title: 'Treffen & Verabredungen', progress: 0 },
-    { title: 'Urlaub & Reisen', progress: 0 },
-    { title: 'Freizeit-Test', progress: 0 }
-  ]},
-  { title: 'Gesundheit & Arztbesuch', lessons: [
+  { title: 'Körper & Gesundheit', lessons: [
     { title: 'Körper & Beschwerden', progress: 0 },
-    { title: 'Beim Arzt', progress: 0 },
-    { title: 'Apotheke & Medikamente', progress: 0 },
-    { title: 'Gesundheits-Test', progress: 0 }
   ]},
-  { title: 'Arbeit & Beruf', lessons: [
-    { title: 'Berufe & Arbeitsplätze', progress: 0 },
-    { title: 'Im Büro', progress: 0 },
-    { title: 'Vorstellungsgespräch', progress: 0 },
-    { title: 'Berufs-Test', progress: 0 }
+  { title: 'Grammatik A1', lessons: [
+    { title: 'Verben im Präsens', progress: 0 },
+    { title: 'Verneinung & Fragen', progress: 0 },
   ]},
-  { title: 'Länder & Nationalitäten', lessons: [
-    { title: 'Länder & Nationalitäten', progress: 0 },
-    { title: 'Sprachen & Herkunft', progress: 0 },
-    { title: 'Länder-Test', progress: 0 }
-  ]},
-  { title: 'Häufige Redewendungen', lessons: [
-    { title: 'Häufige Phrasen', progress: 0 },
-    { title: 'Sprichwörter & Redensarten', progress: 0 },
-    { title: 'Rede-Test', progress: 0 }
-  ]}
 ];
 
 // =============================================
@@ -820,6 +1337,7 @@ function isContainerUnlocked(index) {
 // =============================================
 
 function showRegister() {
+  document.getElementById('auth-section').classList.remove('hidden');
   document.getElementById('auth-title').classList.remove('hidden');
   document.getElementById('auth-title').innerText = 'Registrieren';
   document.getElementById('register-box').classList.remove('hidden');
@@ -828,6 +1346,7 @@ function showRegister() {
 }
 
 function showLogin() {
+  document.getElementById('auth-section').classList.remove('hidden');
   document.getElementById('auth-title').classList.remove('hidden');
   document.getElementById('auth-title').innerText = 'Login';
   document.getElementById('register-box').classList.add('hidden');
@@ -841,9 +1360,7 @@ function showDashboard(name) {
 
   loadProgressIntoData(user.email);
 
-  document.getElementById('auth-title').classList.add('hidden');
-  document.getElementById('register-box').classList.add('hidden');
-  document.getElementById('login-box').classList.add('hidden');
+  document.getElementById('auth-section').classList.add('hidden');
   document.getElementById('dashboard-section').classList.remove('hidden');
   document.getElementById('greeting').innerText = 'Hoş geldin ' + name + '!';
   document.querySelector('.turkish-greeting').innerText = 'Bugün ne öğrenmek istiyorsun?';
@@ -853,6 +1370,25 @@ function showDashboard(name) {
   document.getElementById('lesson-detail').classList.add('hidden');
   document.getElementById('review-view').classList.add('hidden');
   document.getElementById('overall-progress').classList.remove('hidden');
+
+  // Motivations-Motto des Tages
+  const mottos = [
+    'Jede Lektion bringt dich deinem Ziel näher!',
+    'Türkisch lernen — Schritt für Schritt zum Erfolg.',
+    'Dein Gehirn wächst mit jeder neuen Vokabel!',
+    'Heute gelernt = morgen besser kommuniziert.',
+    'Kleine Schritte, große Wirkung — weiter so!',
+    'Bir adım daha! — Noch ein Schritt!',
+    'Sprachen öffnen Türen — du öffnest gerade eine!',
+    'Konsistenz schlägt Talent — du bist auf dem richtigen Weg!',
+    'Harika! — Fantastisch! Du bist dabei!',
+    'Jede Minute die du lernst, zählt.',
+  ];
+  const banner = document.getElementById('motto-banner');
+  if (banner) {
+    const idx = new Date().getDate() % mottos.length;
+    banner.textContent = mottos[idx];
+  }
 
   const allLessons = CATEGORY_DATA.flatMap(c => c.lessons);
   const totalSum = allLessons.reduce((acc, l) => acc + l.progress, 0);

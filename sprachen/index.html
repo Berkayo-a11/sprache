@@ -2,7 +2,10 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#f0f4f8">
   <title>Einfacher Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -36,6 +39,147 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 </script>
+  <!-- Dekorativer Sternenhimmel Hintergrund -->
+  <div class="sky-decor" aria-hidden="true">
+    <!-- Linke Seite: Sterne & Monde -->
+    <span class="deco-star s1">★</span>
+    <span class="deco-star s2">✦</span>
+    <span class="deco-star s3">★</span>
+    <span class="deco-star s4">✦</span>
+    <span class="deco-star s5">·</span>
+    <span class="deco-star s6">★</span>
+    <span class="deco-moon m1">☽</span>
+    <span class="deco-moon m2">☽</span>
+    <!-- Rechte Seite: Sterne & Monde -->
+    <span class="deco-star s7">✦</span>
+    <span class="deco-star s8">★</span>
+    <span class="deco-star s9">✦</span>
+    <span class="deco-star s10">★</span>
+    <span class="deco-star s11">·</span>
+    <span class="deco-star s12">✦</span>
+    <span class="deco-moon m3">☽</span>
+    <!-- Mitte oben: vereinzelt -->
+    <span class="deco-star s13">★</span>
+    <span class="deco-star s14">✦</span>
+    <!-- Rakete (SVG mit Gradienten) -->
+    <span class="flying-rocket">
+      <svg viewBox="0 0 44 96" xmlns="http://www.w3.org/2000/svg" width="44" height="96">
+        <defs>
+          <linearGradient id="rBodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#9ab0d8"/>
+            <stop offset="28%"  stop-color="#f0f6ff"/>
+            <stop offset="65%"  stop-color="#dce8ff"/>
+            <stop offset="100%" stop-color="#8aa0c8"/>
+          </linearGradient>
+          <linearGradient id="rNoseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#90a8d0"/>
+            <stop offset="35%"  stop-color="#eaf2ff"/>
+            <stop offset="100%" stop-color="#8098c0"/>
+          </linearGradient>
+          <linearGradient id="rFinGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#8898c8"/>
+            <stop offset="100%" stop-color="#c0cce8"/>
+          </linearGradient>
+          <radialGradient id="rWinGrad" cx="35%" cy="32%" r="65%">
+            <stop offset="0%"   stop-color="#b8e4ff"/>
+            <stop offset="55%"  stop-color="#3a88c0"/>
+            <stop offset="100%" stop-color="#1a5888"/>
+          </radialGradient>
+          <radialGradient id="rFlameGrad" cx="50%" cy="20%" r="70%">
+            <stop offset="0%"   stop-color="#ffffa0"/>
+            <stop offset="35%"  stop-color="#ffd000"/>
+            <stop offset="65%"  stop-color="#ff7000"/>
+            <stop offset="100%" stop-color="#ff2200" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="rFlame2" cx="50%" cy="20%" r="70%">
+            <stop offset="0%"   stop-color="#fff0a0"/>
+            <stop offset="50%"  stop-color="#ff9000"/>
+            <stop offset="100%" stop-color="#ff3300" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="rGlow">
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- Nase (Kegelform mit Gradient) -->
+        <path d="M22 1 C16 12 8 24 8 32 L36 32 C36 24 28 12 22 1Z" fill="url(#rNoseGrad)" stroke="#7090c0" stroke-width="0.6"/>
+        <!-- Körper -->
+        <rect x="8" y="30" width="28" height="36" rx="2" fill="url(#rBodyGrad)" stroke="#7090c0" stroke-width="0.6"/>
+        <!-- Streifen -->
+        <rect x="8" y="41" width="28" height="5" fill="#c0301c" opacity="0.9"/>
+        <rect x="8" y="54" width="28" height="3" fill="#c0301c" opacity="0.6"/>
+        <!-- Fenster -->
+        <circle cx="22" cy="50" r="7.5" fill="url(#rWinGrad)" stroke="#a0c8e8" stroke-width="1.2"/>
+        <path d="M18 46 Q21 43.5 25 46" stroke="white" stroke-width="1.2" fill="none" opacity="0.65" stroke-linecap="round"/>
+        <!-- Highlight-Streifen (3D-Effekt) -->
+        <rect x="10" y="32" width="4" height="32" rx="2" fill="white" opacity="0.18"/>
+        <!-- Linke Flosse -->
+        <path d="M8 55 L0 72 L8 65Z" fill="url(#rFinGrad)" stroke="#6080b0" stroke-width="0.6"/>
+        <!-- Rechte Flosse -->
+        <path d="M36 55 L44 72 L36 65Z" fill="url(#rFinGrad)" stroke="#6080b0" stroke-width="0.6"/>
+        <!-- Triebwerk -->
+        <rect x="11" y="64" width="22" height="4" rx="2" fill="#7888b8"/>
+        <!-- Flamme (mehrschichtig, Glow-Filter) -->
+        <ellipse cx="22" cy="80" rx="10" ry="14" fill="url(#rFlame2)" opacity="0.6" filter="url(#rGlow)"/>
+        <ellipse cx="22" cy="78" rx="7"  ry="11" fill="url(#rFlameGrad)" opacity="0.9"/>
+        <ellipse cx="22" cy="75" rx="4"  ry="7"  fill="#ffe060" opacity="0.95"/>
+        <ellipse cx="22" cy="73" rx="2"  ry="4"  fill="white"   opacity="0.7"/>
+      </svg>
+    </span>
+
+    <!-- Astronaut (SVG mit Gradienten) -->
+    <span class="flying-astronaut">
+      <svg viewBox="0 0 60 78" xmlns="http://www.w3.org/2000/svg" width="60" height="78">
+        <defs>
+          <radialGradient id="aHelmGrad" cx="38%" cy="32%" r="62%">
+            <stop offset="0%"   stop-color="#f4f8ff"/>
+            <stop offset="60%"  stop-color="#d8e8f8"/>
+            <stop offset="100%" stop-color="#a8c0dc"/>
+          </radialGradient>
+          <radialGradient id="aVisorGrad" cx="30%" cy="28%" r="65%">
+            <stop offset="0%"   stop-color="#90d0f8"/>
+            <stop offset="45%"  stop-color="#2878c0"/>
+            <stop offset="100%" stop-color="#0a4880"/>
+          </radialGradient>
+          <linearGradient id="aSuitGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#b0c4e4"/>
+            <stop offset="25%"  stop-color="#eef4ff"/>
+            <stop offset="70%"  stop-color="#dce8f8"/>
+            <stop offset="100%" stop-color="#98b0d0"/>
+          </linearGradient>
+          <radialGradient id="aPackGrad" cx="40%" cy="35%" r="60%">
+            <stop offset="0%"   stop-color="#d0dcf4"/>
+            <stop offset="100%" stop-color="#8898c8"/>
+          </radialGradient>
+        </defs>
+        <!-- Helm -->
+        <circle cx="30" cy="21" r="19" fill="url(#aHelmGrad)" stroke="#90a8cc" stroke-width="1.2"/>
+        <!-- Visier -->
+        <ellipse cx="30" cy="22" rx="13" ry="11" fill="url(#aVisorGrad)" opacity="0.92"/>
+        <!-- Visier-Highlight -->
+        <path d="M21 16 Q27 12 33 15" stroke="white" stroke-width="1.8" fill="none" opacity="0.7" stroke-linecap="round"/>
+        <ellipse cx="24" cy="17" rx="3" ry="1.8" fill="white" opacity="0.3"/>
+        <!-- Helm-Highlight -->
+        <path d="M14 12 Q18 7 26 9" stroke="white" stroke-width="1.2" fill="none" opacity="0.25" stroke-linecap="round"/>
+        <!-- Körper -->
+        <rect x="13" y="38" width="34" height="28" rx="13" fill="url(#aSuitGrad)" stroke="#90a8c8" stroke-width="1.2"/>
+        <!-- Arme -->
+        <ellipse cx="11" cy="43" rx="6" ry="8" fill="url(#aSuitGrad)" stroke="#90a8c8" stroke-width="1"/>
+        <ellipse cx="49" cy="43" rx="6" ry="8" fill="url(#aSuitGrad)" stroke="#90a8c8" stroke-width="1"/>
+        <!-- Anzug-Highlight -->
+        <rect x="15" y="40" width="5" height="24" rx="2.5" fill="white" opacity="0.15"/>
+        <!-- Brust-Pack -->
+        <rect x="20" y="43" width="20" height="14" rx="4" fill="url(#aPackGrad)" stroke="#7888b8" stroke-width="1"/>
+        <circle cx="25" cy="49" r="2.2" fill="#ff4040" opacity="0.85"/>
+        <circle cx="30" cy="49" r="2.2" fill="#40dd40" opacity="0.85"/>
+        <circle cx="35" cy="49" r="2.2" fill="#ffcc00" opacity="0.9"/>
+        <!-- Beine -->
+        <rect x="16" y="63" width="12" height="12" rx="6" fill="url(#aSuitGrad)" stroke="#90a8c8" stroke-width="1"/>
+        <rect x="32" y="63" width="12" height="12" rx="6" fill="url(#aSuitGrad)" stroke="#90a8c8" stroke-width="1"/>
+      </svg>
+    </span>
+  </div>
+
   <div class="container">
 
     <!-- Auth-Bereich: Registrierung + Login -->
@@ -74,6 +218,9 @@ window.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
       </div>
+
+      <!-- Motivations-Banner -->
+      <div id="motto-banner" class="motto-banner"></div>
 
       <!-- "Heute wiederholen" Bereich -->
       <div id="review-section" class="review-section hidden">

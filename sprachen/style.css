@@ -6,28 +6,243 @@ html, body {
   padding: 0;
   min-height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-  background: #f0f4f8;
+  background: #0f0c2a;
 }
 
 body {
   display: block;
+  position: relative;
+  overflow-x: hidden;
+  /* Osmanischer Sternenhimmel über Istanbul */
   background:
-    radial-gradient(ellipse at 0% 0%,   rgba(255,230,200,0.55) 0%, transparent 60%),
-    radial-gradient(ellipse at 100% 30%, rgba(200,230,255,0.45) 0%, transparent 55%),
-    radial-gradient(ellipse at 20% 100%, rgba(200,255,220,0.4)  0%, transparent 55%),
-    #f5f7fa;
+    /* Goldener Schimmer oben — Kuppel der Moschee */
+    radial-gradient(ellipse at 50% -10%,  rgba(212,175,55,0.22)  0%, transparent 55%),
+    /* Morgendliches Türkis am Horizont */
+    radial-gradient(ellipse at 100% 60%,  rgba(0,168,160,0.18)   0%, transparent 50%),
+    /* Tiefes Violett — Hauch Bosporus-Nacht */
+    radial-gradient(ellipse at 0%   40%,  rgba(120,40,140,0.20)   0%, transparent 55%),
+    /* Warmes Rot — osmanische Flagge */
+    radial-gradient(ellipse at 85%  90%,  rgba(190,30,45,0.16)   0%, transparent 45%),
+    /* Tiefblauer Nachthimmel */
+    linear-gradient(175deg, #0f0c2a 0%, #1a1550 35%, #0d2a4a 70%, #10192e 100%);
   background-attachment: fixed;
+  animation: skyDrift 18s ease-in-out infinite alternate;
+}
+
+@keyframes skyDrift {
+  0%   { filter: hue-rotate(0deg)   brightness(1);    }
+  50%  { filter: hue-rotate(8deg)   brightness(1.06); }
+  100% { filter: hue-rotate(-6deg)  brightness(0.97); }
+}
+
+/* =============================================
+   SKY DECORATION — Sterne & Monde links/rechts
+   ============================================= */
+
+.sky-decor {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Basisstil alle Deko-Elemente */
+.deco-star, .deco-moon {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+.deco-star {
+  color: rgba(255, 245, 180, 0.75);
+  animation: starFloat 6s ease-in-out infinite alternate;
+}
+
+.deco-moon {
+  color: rgba(255, 220, 100, 0.55);
+  animation: moonFloat 9s ease-in-out infinite alternate;
+  font-style: normal;
+}
+
+/* Linke Seite */
+.s1  { left: 2%;  top:  8%;  font-size: 0.85rem; animation-delay: 0s;    animation-duration: 7s;  }
+.s2  { left: 5%;  top: 22%;  font-size: 0.55rem; animation-delay: 1.2s;  animation-duration: 5s;  opacity: 0.6; }
+.s3  { left: 1%;  top: 38%;  font-size: 1rem;    animation-delay: 2.5s;  animation-duration: 8s;  }
+.s4  { left: 7%;  top: 55%;  font-size: 0.5rem;  animation-delay: 0.8s;  animation-duration: 6s;  opacity: 0.5; }
+.s5  { left: 3%;  top: 70%;  font-size: 1.4rem;  animation-delay: 3s;    animation-duration: 9s;  opacity: 0.3; }
+.s6  { left: 9%;  top: 85%;  font-size: 0.7rem;  animation-delay: 1.5s;  animation-duration: 7s;  }
+.m1  { left: 1%;  top: 14%;  font-size: 1.6rem;  animation-delay: 0.5s;  animation-duration: 11s; }
+.m2  { left: 6%;  top: 62%;  font-size: 1.1rem;  animation-delay: 4s;    animation-duration: 13s; opacity: 0.45; }
+
+/* Rechte Seite */
+.s7  { right: 3%;  top: 12%;  font-size: 0.75rem; animation-delay: 1s;    animation-duration: 6s;  }
+.s8  { right: 6%;  top: 27%;  font-size: 1rem;    animation-delay: 2s;    animation-duration: 8s;  }
+.s9  { right: 2%;  top: 44%;  font-size: 0.5rem;  animation-delay: 0.3s;  animation-duration: 5s;  opacity: 0.55; }
+.s10 { right: 8%;  top: 60%;  font-size: 0.85rem; animation-delay: 3.5s;  animation-duration: 7s;  }
+.s11 { right: 4%;  top: 75%;  font-size: 1.5rem;  animation-delay: 1.8s;  animation-duration: 9s;  opacity: 0.3; }
+.s12 { right: 1%;  top: 88%;  font-size: 0.65rem; animation-delay: 2.8s;  animation-duration: 6s;  }
+.m3  { right: 5%;  top: 35%;  font-size: 1.3rem;  animation-delay: 2s;    animation-duration: 12s; opacity: 0.5; }
+
+/* Mitte oben */
+.s13 { left: 30%; top: 3%;   font-size: 0.6rem;  animation-delay: 1s;    animation-duration: 7s;  opacity: 0.5; }
+.s14 { left: 60%; top: 6%;   font-size: 0.45rem; animation-delay: 2.5s;  animation-duration: 5s;  opacity: 0.4; }
+
+@keyframes starFloat {
+  0%   { transform: translateY(0px)   scale(1);    opacity: 0.6; }
+  50%  { transform: translateY(-5px)  scale(1.15); opacity: 1;   }
+  100% { transform: translateY(2px)   scale(0.9);  opacity: 0.7; }
+}
+
+/* =============================================
+   RAKETE — CSS Motion Path (Bézierkurve)
+   ============================================= */
+.flying-rocket {
+  position: fixed;
+  width: 44px;
+  height: 96px;
+  top: 0; left: 0;           /* Anker — Motion Path übernimmt die Position */
+  offset-path: path('M -60 820 C 80 700, 180 520, 280 340 S 420 140, 520 -60');
+  offset-rotate: auto;       /* Dreht sich automatisch in Flugrichtung */
+  offset-distance: 0%;
+  animation: rocketFly 20s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: 2s;
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 0 8px rgba(255,160,60,0.7)) drop-shadow(0 0 3px rgba(255,220,80,0.45));
+}
+
+@keyframes rocketFly {
+  0%   { offset-distance: 0%;   opacity: 0;   }
+  6%   { opacity: 1;            }
+  88%  { opacity: 1;            }
+  100% { offset-distance: 100%; opacity: 0;   }
+}
+
+/* =============================================
+   ASTRONAUT — CSS Motion Path (S-Kurve, schwerelos)
+   ============================================= */
+.flying-astronaut {
+  position: fixed;
+  width: 60px;
+  height: 78px;
+  top: 0; left: 0;
+  /* Sanfte S-Kurve von rechts nach links — schwebt durch den Raum */
+  offset-path: path('M 520 160 C 420 180, 340 130, 260 200 S 120 320, -60 340');
+  offset-rotate: auto 90deg;  /* 90° Korrektur damit er aufrecht schwebt */
+  offset-distance: 0%;
+  animation: astronautDrift 28s ease-in-out infinite;
+  animation-delay: 12s;
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 0 10px rgba(100,180,255,0.5));
+}
+
+@keyframes astronautDrift {
+  0%   { offset-distance: 0%;   opacity: 0;  }
+  7%   { opacity: 1;            }
+  90%  { opacity: 1;            }
+  100% { offset-distance: 100%; opacity: 0;  }
+}
+
+@keyframes moonFloat {
+  0%   { transform: translateY(0px)  rotate(-5deg);  opacity: 0.45; }
+  50%  { transform: translateY(-8px) rotate(3deg);   opacity: 0.75; }
+  100% { transform: translateY(3px)  rotate(-8deg);  opacity: 0.5;  }
+}
+
+/* =============================================
+   STERNE — CSS-generierter Sternenhimmel
+   ============================================= */
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  /* Viele kleine Sterne via box-shadow */
+  background:
+    radial-gradient(1px 1px at  4%  8%, rgba(255,255,255,0.85) 0%, transparent 100%),
+    radial-gradient(1px 1px at 11% 16%, rgba(255,255,220,0.7)  0%, transparent 100%),
+    radial-gradient(1px 1px at 18%  3%, rgba(255,255,255,0.9)  0%, transparent 100%),
+    radial-gradient(1px 1px at 26% 22%, rgba(255,235,180,0.75) 0%, transparent 100%),
+    radial-gradient(1px 1px at 33%  7%, rgba(255,255,255,0.6)  0%, transparent 100%),
+    radial-gradient(1px 1px at 41% 14%, rgba(220,235,255,0.8)  0%, transparent 100%),
+    radial-gradient(1px 1px at 48%  2%, rgba(255,255,255,0.95) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 19%, rgba(255,255,220,0.65) 0%, transparent 100%),
+    radial-gradient(1px 1px at 63% 10%, rgba(255,255,255,0.7)  0%, transparent 100%),
+    radial-gradient(1px 1px at 70%  5%, rgba(255,240,200,0.85) 0%, transparent 100%),
+    radial-gradient(1px 1px at 77% 25%, rgba(255,255,255,0.6)  0%, transparent 100%),
+    radial-gradient(1px 1px at 84%  1%, rgba(220,220,255,0.9)  0%, transparent 100%),
+    radial-gradient(1px 1px at 91% 18%, rgba(255,255,255,0.75) 0%, transparent 100%),
+    radial-gradient(1px 1px at 97% 12%, rgba(255,250,220,0.8)  0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at  7% 30%, rgba(255,255,255,0.9) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 21% 35%, rgba(255,240,180,0.85) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 38% 28%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 52% 40%, rgba(220,235,255,0.9) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 67% 33%, rgba(255,255,255,0.8) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 80% 38%, rgba(255,245,200,0.85) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 93% 29%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(2px 2px at 14%  50%, rgba(255,255,255,0.5)  0%, transparent 100%),
+    radial-gradient(2px 2px at 30%  45%, rgba(255,230,150,0.6)  0%, transparent 100%),
+    radial-gradient(2px 2px at 46%  55%, rgba(255,255,255,0.55) 0%, transparent 100%),
+    radial-gradient(2px 2px at 61%  48%, rgba(200,220,255,0.65) 0%, transparent 100%),
+    radial-gradient(2px 2px at 75%  52%, rgba(255,255,255,0.5)  0%, transparent 100%),
+    radial-gradient(2px 2px at 88%  44%, rgba(255,240,180,0.6)  0%, transparent 100%),
+    /* Großer Stern / Venus */
+    radial-gradient(3px 3px at 72% 8%, rgba(255,245,180,1) 0%, rgba(255,220,100,0.4) 60%, transparent 100%);
+  animation: starTwinkle 6s ease-in-out infinite alternate;
+}
+
+@keyframes starTwinkle {
+  0%   { opacity: 0.7; }
+  33%  { opacity: 1;   }
+  66%  { opacity: 0.8; }
+  100% { opacity: 0.95; }
+}
+
+/* Halbmond — oben rechts, dezent */
+body::after {
+  content: '';
+  position: fixed;
+  top: 18px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow:
+    inset -14px -4px 0 0 rgba(255, 230, 120, 0.82),
+    0 0 18px 4px rgba(255, 200, 60, 0.18);
+  pointer-events: none;
+  z-index: 0;
+  animation: moonGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes moonGlow {
+  0%   { box-shadow: inset -14px -4px 0 0 rgba(255,230,120,0.82), 0 0 18px 4px rgba(255,200,60,0.18); }
+  100% { box-shadow: inset -14px -4px 0 0 rgba(255,240,160,0.95), 0 0 28px 8px rgba(255,210,80,0.30); }
 }
 
 .container {
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
   text-align: left;
   padding: 16px;
+  padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  padding-left: calc(16px + env(safe-area-inset-left));
+  padding-right: calc(16px + env(safe-area-inset-right));
   margin: 0;
   border-radius: 0;
-  background: #f4f4f8;
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
 .dashboard-top {
@@ -36,6 +251,12 @@ body {
   align-items: flex-start;
   margin-bottom: 14px;
   gap: 12px;
+}
+
+/* Heading auf dunklem Hintergrund lesbar */
+#greeting {
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
 }
 
 .account-area {
@@ -105,10 +326,13 @@ body {
   justify-content: space-between;
   gap: 12px;
   padding: 13px 16px;
-  background: #f0f8ff;
-  border: 1.5px solid #a8d4f0;
+  background: rgba(225, 242, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(100,180,240,0.5);
   border-radius: 14px;
   margin-bottom: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.28);
 }
 
 .review-section-left {
@@ -135,7 +359,7 @@ body {
 }
 
 .review-start-btn {
-  background: #1a6fa8;
+  background: linear-gradient(135deg, #1a6fa8, #0d9488);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -145,9 +369,20 @@ body {
   font-size: 0.9rem;
   white-space: nowrap;
   flex-shrink: 0;
-  transition: background 0.15s;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 3px 10px rgba(26,111,168,0.35);
+  animation: pulseBtn 2.5s ease-in-out infinite;
 }
-.review-start-btn:hover { background: #155e94; }
+.review-start-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 18px rgba(26,111,168,0.45);
+  animation: none;
+}
+
+@keyframes pulseBtn {
+  0%, 100% { box-shadow: 0 3px 10px rgba(26,111,168,0.35); }
+  50%       { box-shadow: 0 3px 20px rgba(26,111,168,0.65); }
+}
 
 /* =============================================
    QUIZ TYPE LABEL — zeigt Übungstyp
@@ -202,10 +437,17 @@ body {
   gap: 14px;
   margin-bottom: 14px;
   padding: 12px 16px;
-  background: #fff8f0;
-  border: 1.5px solid #ffd6a0;
+  background: rgba(255, 248, 235, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255,210,100,0.6);
   border-radius: 14px;
   position: relative;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,200,60,0.15);
+  transition: box-shadow 0.2s;
+}
+.streak-bar:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.35), 0 0 12px rgba(255,200,60,0.2);
 }
 
 .streak-badge {
@@ -344,6 +586,24 @@ body {
   box-sizing: border-box;
 }
 
+/* Auth-Box — schwebt vor dem Sternenhimmel */
+#auth-section {
+  max-width: 400px;
+  margin: 60px auto 0;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 22px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,175,55,0.2) inset;
+  border: 1px solid rgba(212,175,55,0.15);
+}
+
+#auth-title {
+  color: #1a1550;
+  margin-top: 0;
+}
+
 input {
   width: 100%;
   padding: 12px;
@@ -367,8 +627,18 @@ button {
   font-size: 1.75rem;
   margin-top: 0;
   margin-bottom: 18px;
-  color: #2f4f4f;
-  font-weight: 600;
+  background: linear-gradient(90deg, #e55b00, #2e8b57, #1a6fa8);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  animation: gradientText 4s linear infinite;
+}
+
+@keyframes gradientText {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
 .lessons {
@@ -380,19 +650,34 @@ button {
 
 .category-card {
   padding: 16px;
-  border-radius: 14px;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 1px 0 rgba(255,255,255,0.15) inset;
   text-align: left;
   cursor: pointer;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.22s ease;
   border-top: 4px solid var(--cat-color, #2e8b57);
   position: relative;
+  overflow: hidden;
+}
+
+.category-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0) 60%, rgba(255,255,255,0.5) 100%);
+  pointer-events: none;
 }
 
 .category-card:not(.category-locked):hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.13);
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.category-card:not(.category-locked):active {
+  transform: scale(0.97);
 }
 
 .category-icon-badge {
@@ -421,10 +706,13 @@ button {
   border: 1px solid #e4e8f2;
   background: #fafbff;
   cursor: pointer;
+  transition: transform 0.18s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.18s ease, border-color 0.18s;
 }
 
 .lesson-item:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transform: translateX(4px);
+  box-shadow: 0 4px 14px rgba(46,139,87,0.15);
+  border-color: #2e8b57;
 }
 
 .resume-area {
@@ -502,8 +790,18 @@ button {
   margin-bottom: 16px;
   padding: 14px 16px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #f0fdf6, #eaf4ff);
-  border: 1.5px solid #c8dff5;
+  background: rgba(230, 245, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-size: 300% 300%;
+  border: 1.5px solid rgba(150,200,255,0.5);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.28);
+}
+
+@keyframes overallBg {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .progress-bar-bg {
@@ -516,9 +814,16 @@ button {
 
 .progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #2e8b57, #52c97a);
+  background: linear-gradient(90deg, #2e8b57, #52c97a, #38bdf8);
+  background-size: 200% auto;
   border-radius: inherit;
-  transition: width 0.5s ease;
+  transition: width 0.7s cubic-bezier(0.34,1.56,0.64,1);
+  animation: progressShimmer 2.5s linear infinite;
+}
+
+@keyframes progressShimmer {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
 .hidden {
@@ -841,9 +1146,14 @@ button {
   cursor: pointer;
   text-align: left;
   margin: 0;
-  transition: border-color 0.15s, background 0.15s;
+  transition: border-color 0.15s, background 0.15s, transform 0.12s;
 }
-.quiz-btn:hover:not(:disabled) { border-color: #2e8b57; background: #f0f8f4; }
+.quiz-btn:hover:not(:disabled) {
+  border-color: #2e8b57;
+  background: #f0f8f4;
+  transform: translateX(3px);
+}
+.quiz-btn:active:not(:disabled) { transform: scale(0.98); }
 .quiz-btn:disabled { cursor: not-allowed; }
 
 .quiz-correct { background: #d4f5e2 !important; border-color: #2e8b57 !important; color: #1a5c39 !important; }
@@ -1003,12 +1313,21 @@ button {
   margin-top: 14px;
   cursor: pointer;
   border: none;
-  border-radius: 10px;
-  background: #2e8b57;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2e8b57, #38bdf8);
+  background-size: 200% auto;
   color: white;
   font-weight: 700;
+  transition: transform 0.15s, box-shadow 0.15s, background-position 0.3s;
+  box-shadow: 0 4px 16px rgba(46,139,87,0.4);
+  letter-spacing: 0.3px;
 }
-.complete-btn:hover { background: #256b44; }
+.complete-btn:hover {
+  transform: scale(1.02);
+  background-position: right center;
+  box-shadow: 0 6px 24px rgba(46,139,87,0.5);
+}
+.complete-btn:active { transform: scale(0.98); }
 
 .next-lesson-btn {
   width: 100%;
@@ -1045,14 +1364,15 @@ button {
 }
 
 .grade-popup {
-  background: #fff;
+  background: linear-gradient(160deg, #fff 70%, #f0fff8 100%);
   border-radius: 24px;
   padding: 2.2rem 2.4rem;
   text-align: center;
   max-width: 320px;
   width: 90%;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 24px 64px rgba(46,139,87,0.22), 0 4px 20px rgba(0,0,0,0.15);
   animation: gradePopIn 0.42s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1.5px solid rgba(46,139,87,0.15);
 }
 
 @keyframes gradePopIn {
@@ -1442,6 +1762,40 @@ button {
 }
 
 /* =============================================
+   MOTTO BANNER
+   ============================================= */
+
+.motto-banner {
+  margin-bottom: 14px;
+  padding: 11px 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(100,80,180,0.75), rgba(180,60,120,0.65));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffe8c0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35), 0 0 0 1px rgba(212,175,55,0.25) inset;
+  border: 1px solid rgba(212,175,55,0.2);
+  animation: mottoFadeIn 0.6s ease;
+  line-height: 1.4;
+}
+
+@keyframes mottoFadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.motto-banner::before {
+  content: '✨';
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* =============================================
    CONFETTI
    ============================================= */
 .confetti-piece {
@@ -1459,4 +1813,45 @@ button {
   0%   { transform: translate(0, 0) rotate(0deg); opacity: 1; }
   80%  { opacity: 0.9; }
   100% { transform: translate(var(--drift, 0px), 110vh) rotate(var(--rot, 540deg)); opacity: 0; }
+}
+
+/* =============================================
+   MOBILE / iPHONE OPTIMIERUNGEN
+   ============================================= */
+
+/* Verhindert ungewolltes Zoomen beim Antippen von Inputs auf iOS */
+input, select, textarea {
+  font-size: 16px !important;
+}
+
+/* Buttons sollen sich auf Touch nicht seltsam verhalten */
+button {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Verhindert dass Text beim langen Drücken markiert wird */
+.quiz-btn, .word-chip, .nachsprech-word, .category-card, .lesson-item {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Scrolling flüssiger auf iOS */
+body, .container {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Kleine Bildschirme: Schrift etwas kompakter */
+@media (max-width: 390px) {
+  .grade-popup-text { font-size: 1.6rem; }
+  .streak-count     { font-size: 1.6rem; }
+  .turkish-greeting { font-size: 1.45rem; }
+}
+
+/* Toast nicht hinter Home-Indicator auf iPhone */
+.toast {
+  bottom: calc(-80px - env(safe-area-inset-bottom));
+}
+.toast-show {
+  bottom: calc(24px + env(safe-area-inset-bottom));
 }
