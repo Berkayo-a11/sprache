@@ -7,14 +7,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script>
-const password = "CaraBerkay"; // dein Passwort
+<script>
+const password = "CaBeRaKay";
+let stored = localStorage.getItem("auth");
 
-const userInput = prompt("Passwort eingeben:");
+if (stored !== password) {
+  const userInput = prompt("Passwort eingeben:");
 
-if (userInput !== password) {
-  document.body.innerHTML = "<h1>Zugriff verweigert</h1>";
+  if (userInput === password) {
+    localStorage.setItem("auth", password);
+  } else {
+    document.body.innerHTML = "<h1>Zugriff verweigert</h1>";
+    throw new Error("Zugriff verweigert");
+  }
 }
+</script>
 </script>
   <div class="container">
 
