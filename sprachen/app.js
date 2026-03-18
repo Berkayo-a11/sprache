@@ -4144,9 +4144,12 @@ window.addEventListener('DOMContentLoaded', () => {
     showNameInput();
   }
 
-  // Enter-Taste auf Name-Input
-  const nameInput = document.getElementById('name-input');
-  if (nameInput) {
-    nameInput.addEventListener('keydown', e => { if (e.key === 'Enter') startWithName(); });
+  // Name-Formular abfangen (verhindert Seiten-Reload in Safari)
+  const nameForm = document.getElementById('name-form');
+  if (nameForm) {
+    nameForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      startWithName();
+    });
   }
 });
