@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(node -e \":*)",
+      "Bash(npm run:*)",
+      "Bash(ls c:/Users/berka/projects/helloworld/sprachen/audio/*.mp3)",
+      "Bash(grep \"\\\\.mp3$\")"
+    ]
+  }
+}

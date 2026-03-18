@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Einfacher Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Auth-Bereich: Registrierung + Login -->
+    <div id="auth-section">
+      <h1 id="auth-title">Registrieren</h1>
+
+      <div id="register-box">
+        <input type="text" id="register-name" placeholder="Name eingeben">
+        <input type="email" id="register-email" placeholder="E-Mail eingeben">
+        <input type="password" id="register-password" placeholder="Passwort eingeben">
+        <button onclick="registerUser()">Registrieren</button>
+        <p>Schon registriert? <a href="#" onclick="showLogin(); return false;">Hier anmelden</a></p>
+      </div>
+
+      <div id="login-box" class="hidden">
+        <input type="email" id="login-email" placeholder="E-Mail eingeben">
+        <input type="password" id="login-password" placeholder="Passwort eingeben">
+        <button onclick="loginUser()">Login</button>
+        <p><a href="#" onclick="forgotPassword(); return false;">Passwort vergessen?</a></p>
+        <p>Noch kein Konto? <a href="#" onclick="showRegister(); return false;">Hier registrieren</a></p>
+      </div>
+    </div>
+
+    <!-- Dashboard-Bereich -->
+    <div id="dashboard-section" class="hidden">
+      <div class="dashboard-top">
+        <div>
+          <h1 id="greeting">Hallo</h1>
+          <p class="turkish-greeting">Hoş geldin!</p>
+        </div>
+        <div class="account-area">
+          <button class="account-btn" onclick="toggleAccountMenu()" aria-label="Konto Menü">☰</button>
+          <div id="account-menu" class="account-menu hidden">
+            <button onclick="editAccount()">👤 Konto</button>
+            <button onclick="logoutUser()">🚪 Logout</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- "Heute wiederholen" Bereich -->
+      <div id="review-section" class="review-section hidden">
+        <div class="review-section-left">
+          <span class="review-icon">🔄</span>
+          <div>
+            <div class="review-title">Heute wiederholen</div>
+            <div class="review-subtitle" id="review-subtitle">Wörter warten auf Wiederholung</div>
+          </div>
+        </div>
+        <button class="review-start-btn" onclick="startReviewSession()">Starten →</button>
+      </div>
+
+      <!-- Streak-Anzeige -->
+      <div id="streak-bar" class="streak-bar">
+        <div class="streak-badge" id="streak-badge">
+          <span class="streak-flame" id="streak-flame">🔥</span>
+          <span class="streak-count" id="streak-count">0</span>
+          <span class="streak-days-label">Tage</span>
+        </div>
+        <div class="streak-info">
+          <div class="streak-title" id="streak-title">Streak</div>
+          <div class="streak-message" id="streak-message">Starte heute deine Streak!</div>
+        </div>
+        <div class="streak-today" id="streak-today"></div>
+      </div>
+
+      <div id="overall-progress" class="overall-progress">
+        <div class="lesson-header">
+          <div>Gesamtfortschritt</div>
+          <div id="overall-percent">0%</div>
+        </div>
+        <div class="progress-bar-bg">
+          <div id="overall-fill" class="progress-bar-fill" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div id="category-list" class="lessons"></div>
+
+      <div id="lesson-list" class="lessons hidden">
+        <h2 id="lesson-category-title" class="category-title" style="margin-top:10px;">Lektion</h2>
+        <p id="lesson-category-subtitle" style="color:#6a7480; margin-top:4px;">Wähle eine Lektion</p>
+        <div id="lesson-cards"></div>
+        <button class="back-btn" onclick="backToCategories()">← Zurück zu Kategorien</button>
+      </div>
+
+      <div id="lesson-detail" class="lesson-detail-view hidden"></div>
+      <div id="review-view"   class="lesson-detail-view hidden"></div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
