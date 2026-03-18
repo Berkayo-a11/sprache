@@ -7,20 +7,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<script>
-const password = "CaBeRaKay";
-let stored = localStorage.getItem("auth");
+  <div id="protected-content" style="display:none;"></div>
+  <script>
+const password = "Cara11022002";
+let allowed = false;
 
-if (stored !== password) {
-  const userInput = prompt("Passwort eingeben:");
+// prüfen ob schon gespeichert
+if (localStorage.getItem("auth") === password) {
+  allowed = true;
+} else {
+  const input = prompt("Passwort eingeben:");
 
-  if (userInput === password) {
+  if (input === password) {
     localStorage.setItem("auth", password);
-  } else {
-    document.body.innerHTML = "<h1>Zugriff verweigert</h1>";
-    throw new Error("Zugriff verweigert");
+    allowed = true;
   }
 }
+
+// wenn Seite geladen ist
+window.addEventListener("DOMContentLoaded", function () {
+  const content = document.getElementById("protected-content");
+
+  if (allowed) {
+    content.style.display = "block";
+  } else {
+    document.body.innerHTML = "<h1>Zugriff verweigert</h1>";
+  }
+});
 </script>
 </script>
   <div class="container">
@@ -114,5 +127,6 @@ if (stored !== password) {
   </div>
 
   <script src="app.js"></script>
+  </div>
 </body>
 </html>
